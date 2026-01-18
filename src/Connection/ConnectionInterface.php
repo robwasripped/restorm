@@ -23,9 +23,9 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm\Connection;
+namespace Robwasripped\Restorm\Connection;
 
-use TheSaleGroup\Restorm\Query\Query;
+use Robwasripped\Restorm\Query\Query;
 
 /**
  *

@@ -23,12 +23,12 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm\Query;
+namespace Robwasripped\Restorm\Query;
 
-use TheSaleGroup\Restorm\EntityManager;
-use TheSaleGroup\Restorm\Query\Query;
-use TheSaleGroup\Restorm\Mapping\EntityMapping;
-use TheSaleGroup\Restorm\Mapping\Exception\UnknownEntityException;
+use Robwasripped\Restorm\EntityManager;
+use Robwasripped\Restorm\Query\Query;
+use Robwasripped\Restorm\Mapping\EntityMapping;
+use Robwasripped\Restorm\Mapping\Exception\UnknownEntityException;
 
 /**
  * Description of QueryBuilder

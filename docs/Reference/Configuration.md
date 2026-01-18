@@ -24,7 +24,7 @@ connections:
 entity_mappings:
     Project\Entity\Post:
         connection: default
-        repository_class: TheSaleGroup\Restorm\EntityRepository
+        repository_class: Robwasripped\Restorm\EntityRepository
         paths:
             list: /posts
             get: /posts/{id}
@@ -55,7 +55,7 @@ entity_mappings:
                 entity: Project\Entity\Author
     Project\Entity\Author:
         connection: default
-        repository_class: TheSaleGroup\Restorm\EntityRepository
+        repository_class: Robwasripped\Restorm\EntityRepository
         paths:
             list: /authors
             get: /authors/{username}
@@ -187,7 +187,7 @@ information.
 ## Repository_class
 
 ```YAML
-repository_class: TheSaleGroup\Restorm\EntityRepository
+repository_class: Robwasripped\Restorm\EntityRepository
 ```
 
 The repository class tells RESTORM which repository it should use for fetching

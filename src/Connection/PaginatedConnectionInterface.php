@@ -23,7 +23,7 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm\Connection;
+namespace Robwasripped\Restorm\Connection;
 
 /**
  * An interface for connections that can handle paginated queries.

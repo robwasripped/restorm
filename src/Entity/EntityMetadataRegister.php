@@ -23,7 +23,7 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm\Entity;
+namespace Robwasripped\Restorm\Entity;
 
 /**
  * Description of EntityMetadataRegister

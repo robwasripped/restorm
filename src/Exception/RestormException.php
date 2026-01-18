@@ -23,7 +23,7 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm\Exception;
+namespace Robwasripped\Restorm\Exception;
 
 /**
  *

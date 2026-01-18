@@ -23,9 +23,9 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm\Normalizer\Transformer;
+namespace Robwasripped\Restorm\Normalizer\Transformer;
 
-use TheSaleGroup\Restorm\Normalizer\Exception\InvalidValueException;
+use Robwasripped\Restorm\Normalizer\Exception\InvalidValueException;
 
 /**
  * Description of ScalarTransformer

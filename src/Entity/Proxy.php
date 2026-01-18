@@ -23,13 +23,13 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm\Entity;
+namespace Robwasripped\Restorm\Entity;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use TheSaleGroup\Restorm\EntityManager;
+use Robwasripped\Restorm\EntityManager;
 use ProxyManager\Proxy\GhostObjectInterface;
-use TheSaleGroup\Restorm\Event\PreBuildEvent;
-use TheSaleGroup\Restorm\Entity\EntityMetadata;
+use Robwasripped\Restorm\Event\PreBuildEvent;
+use Robwasripped\Restorm\Entity\EntityMetadata;
 
 /**
  * Description of Proxy

@@ -23,9 +23,9 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm\Connection;
+namespace Robwasripped\Restorm\Connection;
 
-use TheSaleGroup\Restorm\Connection\ConnectionInterface;
+use Robwasripped\Restorm\Connection\ConnectionInterface;
 
 /**
  * Description of ConnectionManager

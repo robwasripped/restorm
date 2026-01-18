@@ -23,14 +23,14 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm\Configuration;
+namespace Robwasripped\Restorm\Configuration;
 
 use Symfony\Component\Yaml\Yaml;
-use TheSaleGroup\Restorm\Mapping\EntityMappingRegister;
-use TheSaleGroup\Restorm\Mapping\EntityMapping;
-use TheSaleGroup\Restorm\Connection\ConnectionRegister;
-use TheSaleGroup\Restorm\Normalizer\Transformer\TransformerInterface;
-use TheSaleGroup\Restorm\Connection\GuzzleConnection;
+use Robwasripped\Restorm\Mapping\EntityMappingRegister;
+use Robwasripped\Restorm\Mapping\EntityMapping;
+use Robwasripped\Restorm\Connection\ConnectionRegister;
+use Robwasripped\Restorm\Normalizer\Transformer\TransformerInterface;
+use Robwasripped\Restorm\Connection\GuzzleConnection;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 

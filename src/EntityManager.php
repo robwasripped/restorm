@@ -23,19 +23,19 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm;
+namespace Robwasripped\Restorm;
 
-use TheSaleGroup\Restorm\Configuration\Configuration;
-use TheSaleGroup\Restorm\Mapping\EntityMappingRegister;
-use TheSaleGroup\Restorm\Connection\ConnectionRegister;
-use TheSaleGroup\Restorm\Normalizer\Normalizer;
-use TheSaleGroup\Restorm\Entity\Proxy;
-use TheSaleGroup\Restorm\Entity\EntityMetadataRegister;
-use TheSaleGroup\Restorm\Mapping\EntityBuilder;
+use Robwasripped\Restorm\Configuration\Configuration;
+use Robwasripped\Restorm\Mapping\EntityMappingRegister;
+use Robwasripped\Restorm\Connection\ConnectionRegister;
+use Robwasripped\Restorm\Normalizer\Normalizer;
+use Robwasripped\Restorm\Entity\Proxy;
+use Robwasripped\Restorm\Entity\EntityMetadataRegister;
+use Robwasripped\Restorm\Mapping\EntityBuilder;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-use TheSaleGroup\Restorm\EntityStore;
+use Robwasripped\Restorm\EntityStore;
 use ProxyManager\Factory\LazyLoadingGhostFactory;
-use TheSaleGroup\Restorm\Event\PrePersistEvent;
+use Robwasripped\Restorm\Event\PrePersistEvent;
 
 /**
  * Description of EntityManager

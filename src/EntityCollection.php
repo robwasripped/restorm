@@ -23,7 +23,7 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm;
+namespace Robwasripped\Restorm;
 
 /**
  * Description of EntityCollection

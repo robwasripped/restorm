@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "TheSaleGroup\\Restorm\\": "src"
+            "Robwasripped\\Restorm\\": "src"
         }
     }
 }

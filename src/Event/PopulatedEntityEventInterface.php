@@ -23,7 +23,7 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm\Event;
+namespace Robwasripped\Restorm\Event;
 
 /**
  *

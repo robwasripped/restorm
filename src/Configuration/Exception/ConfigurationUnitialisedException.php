@@ -23,9 +23,9 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm\Configuration\Exception;
+namespace Robwasripped\Restorm\Configuration\Exception;
 
-use TheSaleGroup\Restorm\Exception\RestormException;
+use Robwasripped\Restorm\Exception\RestormException;
 
 /**
  * Description of ConfigrationUnitialisedException

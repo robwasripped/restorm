@@ -5,7 +5,7 @@
  * and open the template in the editor.
  */
 
-namespace TheSaleGroup\Restorm\Mapping;
+namespace Robwasripped\Restorm\Mapping;
 
 /**
  * Description of EntityMapping

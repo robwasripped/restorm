@@ -1,6 +1,6 @@
 <?php
 
-namespace TheSaleGroup\Restorm\Normalizer\Transformer;
+namespace Robwasripped\Restorm\Normalizer\Transformer;
 
 class BooleanTransformer extends ScalarTransformer
 {

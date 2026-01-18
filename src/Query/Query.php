@@ -24,13 +24,13 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm\Query;
+namespace Robwasripped\Restorm\Query;
 
-use TheSaleGroup\Restorm\Connection\ConnectionInterface;
-use TheSaleGroup\Restorm\Mapping\EntityBuilder;
-use TheSaleGroup\Restorm\EntityCollection;
-use TheSaleGroup\Restorm\PaginatedCollection;
-use TheSaleGroup\Restorm\Connection\PaginatedConnectionInterface;
+use Robwasripped\Restorm\Connection\ConnectionInterface;
+use Robwasripped\Restorm\Mapping\EntityBuilder;
+use Robwasripped\Restorm\EntityCollection;
+use Robwasripped\Restorm\PaginatedCollection;
+use Robwasripped\Restorm\Connection\PaginatedConnectionInterface;
 
 /**
  * Description of Query

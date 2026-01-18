@@ -5,9 +5,9 @@
  * and open the template in the editor.
  */
 
-namespace TheSaleGroup\Restorm\Mapping\Exception;
+namespace Robwasripped\Restorm\Mapping\Exception;
 
-use TheSaleGroup\Restorm\Exception\RestormException;
+use Robwasripped\Restorm\Exception\RestormException;
 
 /**
  * Description of UnknownEntityException

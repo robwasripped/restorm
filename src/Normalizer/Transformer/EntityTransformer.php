@@ -23,15 +23,15 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm\Normalizer\Transformer;
+namespace Robwasripped\Restorm\Normalizer\Transformer;
 
-use TheSaleGroup\Restorm\EntityManager;
-use TheSaleGroup\Restorm\Normalizer\Exception\InvalidValueException;
-use TheSaleGroup\Restorm\Mapping\EntityMapping;
-use TheSaleGroup\Restorm\EntityCollection;
-use TheSaleGroup\Restorm\PaginatedCollection;
-use TheSaleGroup\Restorm\Entity\EntityMetadata;
-use TheSaleGroup\Restorm\Query\QueryBuilder;
+use Robwasripped\Restorm\EntityManager;
+use Robwasripped\Restorm\Normalizer\Exception\InvalidValueException;
+use Robwasripped\Restorm\Mapping\EntityMapping;
+use Robwasripped\Restorm\EntityCollection;
+use Robwasripped\Restorm\PaginatedCollection;
+use Robwasripped\Restorm\Entity\EntityMetadata;
+use Robwasripped\Restorm\Query\QueryBuilder;
 
 /**
  * Description of EntityTransformer

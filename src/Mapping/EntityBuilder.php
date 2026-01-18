@@ -23,15 +23,15 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm\Mapping;
+namespace Robwasripped\Restorm\Mapping;
 
-use TheSaleGroup\Restorm\Mapping\EntityMappingRegister;
-use TheSaleGroup\Restorm\Entity\EntityMetadataRegister;
-use TheSaleGroup\Restorm\Entity\EntityMetadata;
-use TheSaleGroup\Restorm\Normalizer\Normalizer;
+use Robwasripped\Restorm\Mapping\EntityMappingRegister;
+use Robwasripped\Restorm\Entity\EntityMetadataRegister;
+use Robwasripped\Restorm\Entity\EntityMetadata;
+use Robwasripped\Restorm\Normalizer\Normalizer;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-use TheSaleGroup\Restorm\Event\PreBuildEvent;
-use TheSaleGroup\Restorm\Event\PostBuildEvent;
+use Robwasripped\Restorm\Event\PreBuildEvent;
+use Robwasripped\Restorm\Event\PostBuildEvent;
 
 /**
  * Description of EntityBuilder

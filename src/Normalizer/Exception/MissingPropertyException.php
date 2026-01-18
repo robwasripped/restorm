@@ -23,10 +23,10 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm\Normalizer\Exception;
+namespace Robwasripped\Restorm\Normalizer\Exception;
 
 use Exception;
-use TheSaleGroup\Restorm\Exception\RestormException;
+use Robwasripped\Restorm\Exception\RestormException;
 
 /**
  * Description of MissingPropertyException
