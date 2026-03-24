@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * The MIT License
  *
@@ -39,20 +41,11 @@ use GuzzleHttp\Psr7\Response;
  */
 class GuzzleConnection implements ConnectionInterface, PaginatedConnectionInterface
 {
-    /**
-     * @var Client
-     */
-    private $guzzleClient;
+    private readonly Client $guzzleClient;
 
-    /**
-     * @var array
-     */
-    private $config;
+    private readonly array $config;
 
-    /**
-     * @var EventDispatcherInterface
-     */
-    private $eventDispatcher;
+    private readonly EventDispatcherInterface $eventDispatcher;
 
     /**
      *

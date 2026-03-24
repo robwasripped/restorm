@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * The MIT License
  *
@@ -37,7 +39,7 @@ class PaginatedCollection extends EntityCollection
     /**
      * @var Query
      */
-    private $originalQuery;
+    private readonly Query $originalQuery;
 
     /**
      * @var bool Whether the original query has been used or not yet.
@@ -98,12 +100,12 @@ class PaginatedCollection extends EntityCollection
 
     /**
      * Get the count of entities.
-     * 
+     *
      * Calling this method will force initialisation of this object and call
      * each page of content.
-     * 
+     *
      * @return integer the count of entities.
-     * 
+     *
      * @author Rob Treacy <erobert.treacy@thesalegroup.co.uk>
      */
     public function count(): int

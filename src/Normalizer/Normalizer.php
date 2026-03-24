@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * The MIT License
  *
@@ -50,9 +52,11 @@ class Normalizer
         $this->transformers = $transformers;
 
         foreach ($transformers as $transformer) {
-            if ($transformer instanceof AdvancedTransformerInterface) {
-                $transformer->setEntityManager($entityManager);
+            if (!$transformer instanceof AdvancedTransformerInterface) {
+                continue;
             }
+
+            $transformer->setEntityManager($entityManager);
         }
     }
 
@@ -194,7 +198,7 @@ class Normalizer
         if ($value === null) {
             return null;
         } else {
-            $denormalizedValue = array();
+            $denormalizedValue = [];
 
             foreach ($value as $dataName => $dataValue) {
                 $dataType = $this->inferType($dataValue);

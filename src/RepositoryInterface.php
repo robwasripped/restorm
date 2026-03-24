@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * The MIT License
  *
@@ -25,7 +27,7 @@
 
 namespace Robwasripped\Restorm;
 
-use Robwasripped\Restorm\EntityManager;
+
 
 /**
  *

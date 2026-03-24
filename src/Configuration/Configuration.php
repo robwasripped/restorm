@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * The MIT License
  *
@@ -49,22 +51,16 @@ class Configuration
     /**
      * @var array
      */
-    private $configuration;
+    private readonly array $configuration;
 
-    /**
-     * @var EntityMappingRegister
-     */
-    private $entityMappingRegister;
+    private readonly EntityMappingRegister $entityMappingRegister;
 
-    /**
-     * @var ConnectionRegister
-     */
-    private $connectionRegister;
+    private readonly ConnectionRegister $connectionRegister;
 
     /**
      * @var TransformerInterface[]
      */
-    private $dataTransformers = array();
+    private readonly array $dataTransformers;
 
     /**
      * @var EventDispatcherInterface
@@ -170,7 +166,7 @@ class Configuration
 
     private function buildDataTransformers(): array
     {
-        $transformers = array();
+        $transformers = [];
 
         foreach ($this->configuration['transformers'] as $transformerType => $transformerClass) {
             $transformers[$transformerType] = new $transformerClass;

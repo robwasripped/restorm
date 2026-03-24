@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * The MIT License
  *
@@ -33,20 +35,20 @@ interface PaginatedConnectionInterface
 
     /**
      * Return the total number of results available for this query.
-     * 
+     *
      * @return int|null The number of results if the query was successful. Null
      * otherwise
-     * 
+     *
      * @author Rob Treacy <robert.treacy@thesalegroup.co.uk>
      */
     public function getTotalResultsSum(): ?int;
 
     /**
      * Return the number of results from the current query page.
-     * 
+     *
      * @return int|null The number of results if the query was successful. Null
      * otherwise
-     * 
+     *
      * @author Rob Treacy <robert.treacy@thesalegroup.co.uk>
      */
     public function getCurrentPageResultsSum(): ?int;

@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * The MIT License
  *
@@ -29,7 +31,7 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Robwasripped\Restorm\EntityManager;
 use ProxyManager\Proxy\GhostObjectInterface;
 use Robwasripped\Restorm\Event\PreBuildEvent;
-use Robwasripped\Restorm\Entity\EntityMetadata;
+
 
 /**
  * Description of Proxy
@@ -38,10 +40,7 @@ use Robwasripped\Restorm\Entity\EntityMetadata;
  */
 class Proxy implements EventSubscriberInterface
 {
-    /**
-     * @var EntityManager
-     */
-    private $entityManager;
+    private readonly EntityManager $entityManager;
 
     public function __construct(EntityManager $entityManager)
     {
@@ -50,11 +49,11 @@ class Proxy implements EventSubscriberInterface
 
     public static function getSubscribedEvents(): array
     {
-        return array(
+        return [
             PreBuildEvent::NAME => [
                 ['buildProxy', -20],
             ],
-        );
+        ];
     }
 
     public function buildProxy(PreBuildEvent $event)
@@ -63,15 +62,15 @@ class Proxy implements EventSubscriberInterface
             return;
         }
 
-        $proxyOptions = array(
+        $proxyOptions = [
             'skippedProperties' => [],
-        );
+        ];
 
         $entityMapping = $this->entityManager->getEntityMappingRegister()->getEntityMapping($event->getEntityClass());
         $mappedProperties = $entityMapping->getProperties();
 
         $reflectionProperties = (new \ReflectionClass($event->getEntityClass()))->getProperties(\ReflectionProperty::IS_PRIVATE);
-        $properties = array_map(function(\ReflectionProperty $reflectionProperty) {
+        $properties = array_map(static function(\ReflectionProperty $reflectionProperty) {
             return $reflectionProperty->getName();
         }, $reflectionProperties);
 

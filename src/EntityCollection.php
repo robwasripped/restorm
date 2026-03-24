@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * The MIT License
  *
@@ -56,7 +58,7 @@ class EntityCollection implements \ArrayAccess, \Iterator, \Countable
      */
     private $expectedCurrentPage;
 
-    public function __construct(array $entities = array(), ?int $totalItemSum = null, ?int $pageItemSum = null, ?int $currentPage = null)
+    public function __construct(array $entities = [], ?int $totalItemSum = null, ?int $pageItemSum = null, ?int $currentPage = null)
     {
         $this->entities = $entities;
 

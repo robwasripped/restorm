@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * The MIT License
  *
@@ -26,7 +28,7 @@
 namespace Robwasripped\Restorm\Connection;
 
 use Robwasripped\Restorm\Query\Query;
-use Robwasripped\Restorm\Cache\EntityStore;
+
 
 /**
  * Description of CacheConnection

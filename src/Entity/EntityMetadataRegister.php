@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * The MIT License
  *
@@ -35,7 +37,7 @@ class EntityMetadataRegister
     /**
      * @var EntityMetadata[]
      */
-    private $entiyMetadata = array();
+    private $entiyMetadata = [];
     
     public function addEntityMetadata(EntityMetadata $entityMetadata): void
     {
@@ -50,9 +52,9 @@ class EntityMetadataRegister
     public function getEntityMetadata($entity): ?EntityMetadata
     {
         foreach($this->entiyMetadata as $entityMetadata) {
-            if($entityMetadata->getEntity() === $entity) {
-                return $entityMetadata;
-            }
+            if($entityMetadata->getEntity() !== $entity) { continue; }
+
+return $entityMetadata;
         }
         
         return null;

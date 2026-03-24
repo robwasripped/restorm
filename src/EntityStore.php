@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * The MIT License
  *
@@ -43,11 +45,7 @@ use Robwasripped\Restorm\Mapping\Exception\UnknownEntityException;
  */
 class EntityStore implements EventSubscriberInterface
 {
-
-    /**
-     * @var EntityMappingRegister
-     */
-    private $entityMappingRegister;
+    private readonly EntityMappingRegister $entityMappingRegister;
 
     /**
      * @var array
@@ -59,10 +57,7 @@ class EntityStore implements EventSubscriberInterface
      */
     private $entityInstances;
 
-    /**
-     * @var EntityMetadataRegister
-     */
-    private $entityMetadataRegister;
+    private readonly EntityMetadataRegister $entityMetadataRegister;
     private $newEntity;
 
     public function __construct(EntityMappingRegister $entityMappingRegister, EntityMetadataRegister $entityMetadataRegister)
@@ -73,7 +68,7 @@ class EntityStore implements EventSubscriberInterface
 
     public static function getSubscribedEvents(): array
     {
-        return array(
+        return [
             PreBuildEvent::NAME => [
                 ['cacheEntityData', -10],
                 ['findExistingEntity', -10],
@@ -85,7 +80,7 @@ class EntityStore implements EventSubscriberInterface
             PrePersistEvent::NAME => [
                 ['storeNewEntity', 0],
             ]
-        );
+        ];
     }
 
     public function cacheEntityData(PreBuildEvent $event)
@@ -136,7 +131,7 @@ class EntityStore implements EventSubscriberInterface
         $entityMapping = $entityMetadata->getEntityMapping();
 
         // Find the fields that aren't the same as the last known state
-        $pendingChanges = array_udiff_assoc($entityMetadata->getWritablePropertyValues(), (array) $this->entityData[$event->getEntityClass()][$entityMetadata->getIdentifierValue()], function($a, $b) {
+        $pendingChanges = array_udiff_assoc($entityMetadata->getWritablePropertyValues(), (array) $this->entityData[$event->getEntityClass()][$entityMetadata->getIdentifierValue()], static function($a, $b) {
             return (int) ($a !== $b);
         });
 

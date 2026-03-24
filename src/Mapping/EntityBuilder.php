@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * The MIT License
  *
@@ -25,7 +27,7 @@
 
 namespace Robwasripped\Restorm\Mapping;
 
-use Robwasripped\Restorm\Mapping\EntityMappingRegister;
+
 use Robwasripped\Restorm\Entity\EntityMetadataRegister;
 use Robwasripped\Restorm\Entity\EntityMetadata;
 use Robwasripped\Restorm\Normalizer\Normalizer;
@@ -40,25 +42,13 @@ use Robwasripped\Restorm\Event\PostBuildEvent;
  */
 class EntityBuilder
 {
-    /**
-     * @var EntityMappingRegister
-     */
-    private $entityMappingRegister;
+    private readonly EntityMappingRegister $entityMappingRegister;
 
-    /**
-     * @var EntityMetadataRegister
-     */
-    private $entityMetadataRegister;
+    private readonly EntityMetadataRegister $entityMetadataRegister;
 
-    /**
-     * @var Normalizer
-     */
-    private $normalizer;
+    private readonly Normalizer $normalizer;
 
-    /**
-     * @var EventDispatcherInterface
-     */
-    private $eventDispatcher;
+    private readonly EventDispatcherInterface $eventDispatcher;
 
     public function __construct(EntityMappingRegister $entityMappingRegister, EntityMetadataRegister $entityMetadataRegister, Normalizer $normalizer, EventDispatcherInterface $eventDispatcher)
     {

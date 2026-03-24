@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * The MIT License
  *
@@ -34,17 +36,11 @@ use Robwasripped\Restorm\Mapping\EntityMapping;
  */
 class EntityMetadata
 {
-    private $entity;
+    private readonly object $entity;
 
-    /**
-     * @var EntityMapping
-     */
-    private $entityMapping;
+    private readonly EntityMapping $entityMapping;
 
-    /**
-     * @var \ReflectionObject
-     */
-    private $entityReflection;
+    private readonly \ReflectionClass $entityReflection;
 
     public function __construct($entity, EntityMapping $entityMapping)
     {
@@ -90,7 +86,7 @@ class EntityMetadata
 
     public function getWritablePropertyValues(): array
     {
-        $writablePropertyValues = array();
+        $writablePropertyValues = [];
 
         foreach ($this->getWritableProperties() as $propertyName => $propertyOptions) {
             $writablePropertyValues[$propertyName] = $this->getPropertyValue($propertyName);
@@ -101,12 +97,14 @@ class EntityMetadata
 
     public function getWritableProperties(): array
     {
-        $writableProperties = array();
+        $writableProperties = [];
 
         foreach ($this->entityMapping->getProperties() as $propertyName => $propertyOptions) {
-            if (!isset($propertyOptions['read_only']) || $propertyOptions['read_only'] === false) {
-                $writableProperties[$propertyName] = $propertyOptions;
+            if (isset($propertyOptions['read_only']) && $propertyOptions['read_only'] === true) {
+                continue;
             }
+
+            $writableProperties[$propertyName] = $propertyOptions;
         }
 
         return $writableProperties;
