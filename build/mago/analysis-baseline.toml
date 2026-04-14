@@ -141,12 +141,6 @@ count = 1
 [[issues]]
 file = "src/Configuration/Configuration.php"
 code = "redundant-condition"
-message = "Redundant Elvis operator: left-hand side is always truthy."
-count = 1
-
-[[issues]]
-file = "src/Configuration/Configuration.php"
-code = "redundant-condition"
 message = 'This condition (type `Robwasripped\Restorm\Configuration\Configuration`) will always evaluate to true.'
 count = 2
 
@@ -254,18 +248,6 @@ count = 1
 
 [[issues]]
 file = "src/Connection/GuzzleConnection.php"
-code = "invalid-argument"
-message = '''Invalid argument type for argument #1 of `symfony\contracts\eventdispatcher\eventdispatcherinterface::dispatch`: expected `('T.symfony\contracts\eventdispatcher\eventdispatcherinterface::dispatch() extends object)`, but found `string('restorm.pre_query')`.'''
-count = 1
-
-[[issues]]
-file = "src/Connection/GuzzleConnection.php"
-code = "invalid-argument"
-message = 'Invalid argument type for argument #2 of `symfony\contracts\eventdispatcher\eventdispatcherinterface::dispatch`: expected `null|string`, but found `Robwasripped\Restorm\Event\PreQueryEvent`.'
-count = 1
-
-[[issues]]
-file = "src/Connection/GuzzleConnection.php"
 code = "less-specific-argument"
 message = 'Argument type mismatch for argument #2 of `Robwasripped\Restorm\Connection\GuzzleConnection::retrievepaginationdata`: expected `GuzzleHttp\Psr7\Response`, but provided type `Psr\Http\Message\ResponseInterface` is less specific.'
 count = 1
@@ -344,12 +326,6 @@ count = 1
 
 [[issues]]
 file = "src/Connection/GuzzleConnection.php"
-code = "template-constraint-violation"
-message = "Argument type mismatch for template `T`."
-count = 1
-
-[[issues]]
-file = "src/Connection/GuzzleConnection.php"
 code = "unhandled-thrown-type"
 message = 'Potentially unhandled exception `GuzzleHttp\Exception\ClientException` in `Robwasripped\Restorm\Connection\GuzzleConnection::handleQuery`.'
 count = 1
@@ -394,12 +370,6 @@ count = 1
 file = "src/Entity/EntityMetadata.php"
 code = "invalid-iterator"
 message = "The expression provided to `foreach` is not iterable. It resolved to type `mixed`, which is not iterable."
-count = 1
-
-[[issues]]
-file = "src/Entity/EntityMetadata.php"
-code = "missing-parameter-type"
-message = "Parameter `$entity` is missing a type hint."
 count = 1
 
 [[issues]]
@@ -467,12 +437,6 @@ file = "src/Entity/EntityMetadata.php"
 code = "mixed-assignment"
 message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
 count = 5
-
-[[issues]]
-file = "src/Entity/EntityMetadata.php"
-code = "mixed-property-type-coercion"
-message = "A value with a less specific type `mixed` is being assigned to property `$$entity` (object)."
-count = 1
 
 [[issues]]
 file = "src/Entity/EntityMetadata.php"
@@ -687,7 +651,7 @@ count = 1
 [[issues]]
 file = "src/EntityCollection.php"
 code = "mixed-argument"
-message = "Invalid argument type for argument #1 of `key_exists`: expected `array-key`, but found `mixed`."
+message = "Invalid argument type for argument #1 of `array_key_exists`: expected `bool|float|int|string`, but found `mixed`."
 count = 1
 
 [[issues]]
@@ -703,12 +667,6 @@ message = "Invalid index type `nonnull` used for array access on `array<array-ke
 count = 1
 
 [[issues]]
-file = "src/EntityCollection.php"
-code = "template-constraint-violation"
-message = "Argument type mismatch for template `K`."
-count = 1
-
-[[issues]]
 file = "src/EntityManager.php"
 code = "imprecise-type"
 message = "Type `array` in parameter `$dataTransformers` is imprecise, equivalent to `array<array-key, mixed>`."
@@ -718,6 +676,12 @@ count = 1
 file = "src/EntityManager.php"
 code = "invalid-type-cast"
 message = "Casting `mixed` to `array`."
+count = 1
+
+[[issues]]
+file = "src/EntityManager.php"
+code = "less-specific-nested-argument-type"
+message = 'Argument type mismatch for argument #2 of `robwasripped\restorm\normalizer\normalizer::__construct`: expected `array<array-key, Robwasripped\Restorm\Normalizer\Transformer\TransformerInterface>`, but provided type `array<array-key, mixed>` is less specific.'
 count = 1
 
 [[issues]]
@@ -747,6 +711,12 @@ count = 1
 [[issues]]
 file = "src/EntityManager.php"
 code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `robwasripped\restorm\entity\entitymetadata::__construct`: expected `object`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/EntityManager.php"
+code = "mixed-argument"
 message = "Invalid argument type for argument #2 of `array_intersect_key`: expected `array<array-key, mixed>`, but found `mixed`."
 count = 1
 
@@ -767,6 +737,12 @@ file = "src/EntityManager.php"
 code = "mixed-operand"
 message = "Right operand in `!=` comparison has `mixed` type."
 count = 1
+
+[[issues]]
+file = "src/EntityManager.php"
+code = "non-existent-method"
+message = 'Method `addsubscriber` does not exist on type `Symfony\Contracts\EventDispatcher\EventDispatcherInterface`.'
+count = 2
 
 [[issues]]
 file = "src/EntityManager.php"
@@ -926,6 +902,12 @@ count = 1
 
 [[issues]]
 file = "src/EntityStore.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `robwasripped\restorm\entity\entitymetadata::__construct`: expected `object`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/EntityStore.php"
 code = "mixed-array-access"
 message = "Unsafe array access on type `mixed`."
 count = 6
@@ -998,110 +980,68 @@ count = 1
 
 [[issues]]
 file = "src/Event/PostBuildEvent.php"
-code = "non-existent-class-like"
-message = 'Class `Robwasripped\Restorm\Event\PostBuildEvent` cannot extend unknown type `Event`'
-count = 1
-
-[[issues]]
-file = "src/Event/PostBuildEvent.php"
-code = "unused-property"
-message = "Property `$entityClass` is never used."
-count = 1
-
-[[issues]]
-file = "src/Event/PostBuildEvent.php"
-code = "unused-property"
-message = "Property `$entity` is never used."
+code = "missing-parameter-type"
+message = "Parameter `$entity` is missing a type hint."
 count = 1
 
 [[issues]]
 file = "src/Event/PreBuildEvent.php"
-code = "non-existent-class-like"
-message = 'Class `Robwasripped\Restorm\Event\PreBuildEvent` cannot extend unknown type `Event`'
+code = "missing-parameter-type"
+message = "Parameter `$data` is missing a type hint."
+count = 2
+
+[[issues]]
+file = "src/Event/PreBuildEvent.php"
+code = "missing-parameter-type"
+message = "Parameter `$entityClass` is missing a type hint."
 count = 1
 
 [[issues]]
 file = "src/Event/PreBuildEvent.php"
-code = "unused-property"
-message = "Property `$data` is never used."
+code = "missing-parameter-type"
+message = "Parameter `$entity` is missing a type hint."
 count = 1
 
 [[issues]]
 file = "src/Event/PreBuildEvent.php"
-code = "unused-property"
-message = "Property `$entityClass` is never used."
+code = "missing-return-type"
+message = "Function `getData` is missing a return type hint."
 count = 1
 
 [[issues]]
 file = "src/Event/PreBuildEvent.php"
-code = "unused-property"
-message = "Property `$entity` is never used."
+code = "missing-return-type"
+message = "Function `getEntityClass` is missing a return type hint."
 count = 1
 
 [[issues]]
 file = "src/Event/PreBuildEvent.php"
-code = "unused-property"
-message = "Property `$partialData` is never used."
+code = "missing-return-type"
+message = "Function `getEntity` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Event/PreBuildEvent.php"
+code = "missing-return-type"
+message = "Function `setData` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Event/PreBuildEvent.php"
+code = "missing-return-type"
+message = "Function `setEntity` is missing a return type hint."
 count = 1
 
 [[issues]]
 file = "src/Event/PrePersistEvent.php"
-code = "non-existent-class-like"
-message = 'Class `Robwasripped\Restorm\Event\PrePersistEvent` cannot extend unknown type `Event`'
-count = 1
-
-[[issues]]
-file = "src/Event/PrePersistEvent.php"
-code = "unused-property"
-message = "Property `$entityClass` is never used."
-count = 1
-
-[[issues]]
-file = "src/Event/PrePersistEvent.php"
-code = "unused-property"
-message = "Property `$entity` is never used."
-count = 1
-
-[[issues]]
-file = "src/Event/PreQueryEvent.php"
-code = "non-existent-class-like"
-message = 'Class `Robwasripped\Restorm\Event\PreQueryEvent` cannot extend unknown type `Event`'
-count = 1
-
-[[issues]]
-file = "src/Event/PreQueryEvent.php"
-code = "unused-property"
-message = "Property `$query` is never used."
+code = "missing-parameter-type"
+message = "Parameter `$entity` is missing a type hint."
 count = 1
 
 [[issues]]
 file = "src/Exception/UnrecognisedEntityException.php"
 code = "missing-parameter-type"
 message = "Parameter `$entity` is missing a type hint."
-count = 1
-
-[[issues]]
-file = "src/Mapping/EntityBuilder.php"
-code = "invalid-argument"
-message = '''Invalid argument type for argument #1 of `symfony\contracts\eventdispatcher\eventdispatcherinterface::dispatch`: expected `('T.symfony\contracts\eventdispatcher\eventdispatcherinterface::dispatch() extends object)`, but found `string('restorm.post_build')`.'''
-count = 1
-
-[[issues]]
-file = "src/Mapping/EntityBuilder.php"
-code = "invalid-argument"
-message = '''Invalid argument type for argument #1 of `symfony\contracts\eventdispatcher\eventdispatcherinterface::dispatch`: expected `('T.symfony\contracts\eventdispatcher\eventdispatcherinterface::dispatch() extends object)`, but found `string('restorm.pre_build')`.'''
-count = 1
-
-[[issues]]
-file = "src/Mapping/EntityBuilder.php"
-code = "invalid-argument"
-message = 'Invalid argument type for argument #2 of `symfony\contracts\eventdispatcher\eventdispatcherinterface::dispatch`: expected `null|string`, but found `Robwasripped\Restorm\Event\PostBuildEvent`.'
-count = 1
-
-[[issues]]
-file = "src/Mapping/EntityBuilder.php"
-code = "invalid-argument"
-message = 'Invalid argument type for argument #2 of `symfony\contracts\eventdispatcher\eventdispatcherinterface::dispatch`: expected `null|string`, but found `Robwasripped\Restorm\Event\PreBuildEvent`.'
 count = 1
 
 [[issues]]
@@ -1151,12 +1091,6 @@ file = "src/Mapping/EntityBuilder.php"
 code = "possibly-null-argument"
 message = 'Argument #2 of method `Robwasripped\Restorm\Normalizer\Normalizer::denormalize` is possibly `null`, but parameter type `Robwasripped\Restorm\Entity\EntityMetadata` does not accept it.'
 count = 1
-
-[[issues]]
-file = "src/Mapping/EntityBuilder.php"
-code = "template-constraint-violation"
-message = "Argument type mismatch for template `T`."
-count = 2
 
 [[issues]]
 file = "src/Mapping/EntityBuilder.php"
@@ -1232,6 +1166,18 @@ count = 1
 
 [[issues]]
 file = "src/Mapping/EntityMapping.php"
+code = "mixed-argument"
+message = "Invalid argument type for argument #2 of `array_key_exists`: expected `array<array-key, mixed>`, but found `mixed`."
+count = 4
+
+[[issues]]
+file = "src/Mapping/EntityMapping.php"
+code = "mixed-array-access"
+message = "Unsafe array access on type `mixed`."
+count = 2
+
+[[issues]]
+file = "src/Mapping/EntityMapping.php"
 code = "mixed-array-index"
 message = "Invalid index type `mixed` used for array access on `array<array-key, mixed>`."
 count = 2
@@ -1300,12 +1246,6 @@ count = 1
 file = "src/Mapping/EntityMappingRegister.php"
 code = "unhandled-thrown-type"
 message = 'Potentially unhandled exception `Robwasripped\Restorm\Mapping\Exception\UnknownEntityException` in `Robwasripped\Restorm\Mapping\EntityMappingRegister::getEntityMapping`.'
-count = 1
-
-[[issues]]
-file = "src/Normalizer/Normalizer.php"
-code = "imprecise-type"
-message = "Type `array` in parameter `$transformers` is imprecise, equivalent to `array<array-key, mixed>`."
 count = 1
 
 [[issues]]
@@ -1426,7 +1366,7 @@ count = 2
 file = "src/Normalizer/Normalizer.php"
 code = "mixed-assignment"
 message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
-count = 20
+count = 19
 
 [[issues]]
 file = "src/Normalizer/Normalizer.php"
@@ -1444,12 +1384,6 @@ count = 1
 file = "src/Normalizer/Normalizer.php"
 code = "mixed-operand"
 message = "Right operand in `&&` operation has `mixed` type."
-count = 1
-
-[[issues]]
-file = "src/Normalizer/Normalizer.php"
-code = "mixed-property-type-coercion"
-message = 'A value with a less specific type `array<array-key, mixed>` is being assigned to property `$$transformers` (array<array-key, Robwasripped\Restorm\Normalizer\Transformer\TransformerInterface>).'
 count = 1
 
 [[issues]]
@@ -1558,6 +1492,12 @@ count = 1
 file = "src/Normalizer/Transformer/EntityTransformer.php"
 code = "mixed-argument"
 message = "Invalid argument type for argument #1 of `get_class`: expected `object`, but found `mixed`."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Transformer/EntityTransformer.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `robwasripped\restorm\entity\entitymetadata::__construct`: expected `object`, but found `mixed`.'
 count = 1
 
 [[issues]]
@@ -1708,12 +1648,6 @@ count = 1
 file = "src/PaginatedCollection.php"
 code = "redundant-logical-operation"
 message = "Redundant `&&` operation: left operand is always truthy and right operand is evaluated."
-count = 1
-
-[[issues]]
-file = "src/Query/Query.php"
-code = "imprecise-type"
-message = "Type `array` in parameter `$connections` is imprecise, equivalent to `array<array-key, mixed>`."
 count = 1
 
 [[issues]]
@@ -1937,12 +1871,6 @@ file = "src/Query/Query.php"
 code = "mixed-assignment"
 message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
 count = 4
-
-[[issues]]
-file = "src/Query/Query.php"
-code = "mixed-property-type-coercion"
-message = 'A value with a less specific type `array<array-key, mixed>` is being assigned to property `$$connections` (array<array-key, Robwasripped\Restorm\Connection\ConnectionInterface>).'
-count = 1
 
 [[issues]]
 file = "src/Query/Query.php"

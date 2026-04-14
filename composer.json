@@ -20,8 +20,5 @@
         "psr-4": {
             "Robwasripped\\Restorm\\": "src"
         }
-    },
-    "require-dev": {
-        "rector/rector": "^2.4"
     }
 }
