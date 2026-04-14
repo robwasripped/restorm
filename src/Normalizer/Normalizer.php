@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * The MIT License
  *
@@ -24,13 +26,13 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm\Normalizer;
+namespace Robwasripped\Restorm\Normalizer;
 
-use TheSaleGroup\Restorm\EntityManager;
-use TheSaleGroup\Restorm\Normalizer\Transformer\TransformerInterface;
-use TheSaleGroup\Restorm\Normalizer\Transformer\AdvancedTransformerInterface;
-use TheSaleGroup\Restorm\Entity\EntityMetadata;
-use TheSaleGroup\Restorm\PaginatedCollection;
+use Robwasripped\Restorm\EntityManager;
+use Robwasripped\Restorm\Normalizer\Transformer\TransformerInterface;
+use Robwasripped\Restorm\Normalizer\Transformer\AdvancedTransformerInterface;
+use Robwasripped\Restorm\Entity\EntityMetadata;
+use Robwasripped\Restorm\PaginatedCollection;
 
 /**
  * Description of Normalizer
@@ -50,9 +52,11 @@ class Normalizer
         $this->transformers = $transformers;
 
         foreach ($transformers as $transformer) {
-            if ($transformer instanceof AdvancedTransformerInterface) {
-                $transformer->setEntityManager($entityManager);
+            if (!$transformer instanceof AdvancedTransformerInterface) {
+                continue;
             }
+
+            $transformer->setEntityManager($entityManager);
         }
     }
 
@@ -194,7 +198,7 @@ class Normalizer
         if ($value === null) {
             return null;
         } else {
-            $denormalizedValue = array();
+            $denormalizedValue = [];
 
             foreach ($value as $dataName => $dataValue) {
                 $dataType = $this->inferType($dataValue);

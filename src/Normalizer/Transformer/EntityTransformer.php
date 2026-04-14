@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * The MIT License
  *
@@ -23,15 +25,15 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm\Normalizer\Transformer;
+namespace Robwasripped\Restorm\Normalizer\Transformer;
 
-use TheSaleGroup\Restorm\EntityManager;
-use TheSaleGroup\Restorm\Normalizer\Exception\InvalidValueException;
-use TheSaleGroup\Restorm\Mapping\EntityMapping;
-use TheSaleGroup\Restorm\EntityCollection;
-use TheSaleGroup\Restorm\PaginatedCollection;
-use TheSaleGroup\Restorm\Entity\EntityMetadata;
-use TheSaleGroup\Restorm\Query\QueryBuilder;
+use Robwasripped\Restorm\EntityManager;
+use Robwasripped\Restorm\Normalizer\Exception\InvalidValueException;
+use Robwasripped\Restorm\Mapping\EntityMapping;
+use Robwasripped\Restorm\EntityCollection;
+use Robwasripped\Restorm\PaginatedCollection;
+use Robwasripped\Restorm\Entity\EntityMetadata;
+use Robwasripped\Restorm\Query\QueryBuilder;
 
 /**
  * Description of EntityTransformer
@@ -76,7 +78,7 @@ class EntityTransformer implements AdvancedTransformerInterface
                 throw new InvalidValueException('The value passed to the entity transformer must be an array if option "multiple" is true.');
             }
 
-            $entities = array();
+            $entities = [];
 
             foreach ($value as $entityIdentifierValue) {
                 $entity = $this->buildEntity($entityMapping, $entityIdentifierValue, $options['inline'] ?? false);
@@ -86,8 +88,7 @@ class EntityTransformer implements AdvancedTransformerInterface
             return new EntityCollection($entities);
         } else {
 
-            $entity = $this->buildEntity($entityMapping, $value, $options['inline'] ?? false);
-            return $entity;
+            return $this->buildEntity($entityMapping, $value, $options['inline'] ?? false);
         }
     }
 
@@ -101,7 +102,7 @@ class EntityTransformer implements AdvancedTransformerInterface
             if (!$value instanceof EntityCollection) {
                 throw new InvalidValueException('The value passed to the entity transformer must be an EntityCollection instance if option "multiple" is true.');
             }
-            $entityValues = array();
+            $entityValues = [];
             foreach ($value as $entity) {
                 $entityValues[] = $options['inline'] ?? false ? $this->getNormalizedEntity($entity) : $this->getEntityIdentifierValue($entity);
             }

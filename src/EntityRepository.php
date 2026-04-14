@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * The MIT License
  *
@@ -23,10 +25,10 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm;
+namespace Robwasripped\Restorm;
 
-use TheSaleGroup\Restorm\EntityManager;
-use TheSaleGroup\Restorm\Query\QueryBuilder;
+
+use Robwasripped\Restorm\Query\QueryBuilder;
 
 /**
  * Description of Repository
@@ -35,16 +37,9 @@ use TheSaleGroup\Restorm\Query\QueryBuilder;
  */
 class EntityRepository implements RepositoryInterface
 {
-    /**
-     *
-     * @var EntityManager
-     */
-    protected $entityManager;
+    protected readonly EntityManager $entityManager;
     
-    /**
-     * @var string
-     */
-    protected $entityClass;
+    protected readonly string $entityClass;
 
     public function __construct(EntityManager $entityManager, string $entityClass)
     {

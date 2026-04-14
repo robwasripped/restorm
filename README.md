@@ -66,8 +66,8 @@ link you to more documentation and references.
 // Use the composer autoloader to load in RESTORM
 require __DIR__ . '/../vendor/autoload.php';
 
-use TheSaleGroup\Restorm\Configuration\Configuration;
-use TheSaleGroup\Restorm\EntityManager;
+use Robwasripped\Restorm\Configuration\Configuration;
+use Robwasripped\Restorm\EntityManager;
 use App\Entity\Post;
 
 // Create a new Configuration instance based on our configuration
@@ -227,7 +227,7 @@ entity_mappings:
 
         # Use the internal entity repository for querying
         # for entities
-        repository_class: TheSaleGroup\Restorm\EntityRepository
+        repository_class: Robwasripped\Restorm\EntityRepository
 
         # Define the paths to each of the actions used for
         # getting and saving entities
@@ -261,7 +261,7 @@ entity_mappings:
                 entity: Project\Entity\Author
     Project\Entity\Author:
         connection: default
-        repository_class: TheSaleGroup\Restorm\EntityRepository
+        repository_class: Robwasripped\Restorm\EntityRepository
         paths:
             list: /authors
             get: /authors/{username}
@@ -291,8 +291,8 @@ simple script that creates a new `EntityManager` and fetches all our posts:
 // Use the composer autoloader to load in RESTORM
 require __DIR__ . '/../vendor/autoload.php';
 
-use TheSaleGroup\Restorm\Configuration\Configuration;
-use TheSaleGroup\Restorm\EntityManager;
+use Robwasripped\Restorm\Configuration\Configuration;
+use Robwasripped\Restorm\EntityManager;
 use App\Entity\Post;
 
 // Create a new Configuration instance based on our configuration

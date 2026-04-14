@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * The MIT License
  *
@@ -24,17 +26,17 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm;
+namespace Robwasripped\Restorm;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use TheSaleGroup\Restorm\Mapping\EntityMappingRegister;
-use TheSaleGroup\Restorm\Event\PreBuildEvent;
-use TheSaleGroup\Restorm\Event\PostBuildEvent;
-use TheSaleGroup\Restorm\Event\PrePersistEvent;
-use TheSaleGroup\Restorm\Event\PopulatedEntityEventInterface;
-use TheSaleGroup\Restorm\Entity\EntityMetadataRegister;
-use TheSaleGroup\Restorm\Entity\EntityMetadata;
-use TheSaleGroup\Restorm\Mapping\Exception\UnknownEntityException;
+use Robwasripped\Restorm\Mapping\EntityMappingRegister;
+use Robwasripped\Restorm\Event\PreBuildEvent;
+use Robwasripped\Restorm\Event\PostBuildEvent;
+use Robwasripped\Restorm\Event\PrePersistEvent;
+use Robwasripped\Restorm\Event\PopulatedEntityEventInterface;
+use Robwasripped\Restorm\Entity\EntityMetadataRegister;
+use Robwasripped\Restorm\Entity\EntityMetadata;
+use Robwasripped\Restorm\Mapping\Exception\UnknownEntityException;
 
 /**
  * Description of EntityCache
@@ -43,11 +45,7 @@ use TheSaleGroup\Restorm\Mapping\Exception\UnknownEntityException;
  */
 class EntityStore implements EventSubscriberInterface
 {
-
-    /**
-     * @var EntityMappingRegister
-     */
-    private $entityMappingRegister;
+    private readonly EntityMappingRegister $entityMappingRegister;
 
     /**
      * @var array
@@ -59,10 +57,7 @@ class EntityStore implements EventSubscriberInterface
      */
     private $entityInstances;
 
-    /**
-     * @var EntityMetadataRegister
-     */
-    private $entityMetadataRegister;
+    private readonly EntityMetadataRegister $entityMetadataRegister;
     private $newEntity;
 
     public function __construct(EntityMappingRegister $entityMappingRegister, EntityMetadataRegister $entityMetadataRegister)
@@ -73,7 +68,7 @@ class EntityStore implements EventSubscriberInterface
 
     public static function getSubscribedEvents(): array
     {
-        return array(
+        return [
             PreBuildEvent::NAME => [
                 ['cacheEntityData', -10],
                 ['findExistingEntity', -10],
@@ -85,7 +80,7 @@ class EntityStore implements EventSubscriberInterface
             PrePersistEvent::NAME => [
                 ['storeNewEntity', 0],
             ]
-        );
+        ];
     }
 
     public function cacheEntityData(PreBuildEvent $event)
@@ -136,7 +131,7 @@ class EntityStore implements EventSubscriberInterface
         $entityMapping = $entityMetadata->getEntityMapping();
 
         // Find the fields that aren't the same as the last known state
-        $pendingChanges = array_udiff_assoc($entityMetadata->getWritablePropertyValues(), (array) $this->entityData[$event->getEntityClass()][$entityMetadata->getIdentifierValue()], function($a, $b) {
+        $pendingChanges = array_udiff_assoc($entityMetadata->getWritablePropertyValues(), (array) $this->entityData[$event->getEntityClass()][$entityMetadata->getIdentifierValue()], static function($a, $b) {
             return (int) ($a !== $b);
         });
 

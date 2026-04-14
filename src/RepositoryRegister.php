@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * The MIT License
  *
@@ -23,7 +25,7 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm;
+namespace Robwasripped\Restorm;
 
 /**
  * Description of RepositoryRegister
@@ -32,14 +34,14 @@ namespace TheSaleGroup\Restorm;
  */
 class RepositoryRegister
 {
-    private $repositories = array();
+    private $repositories = [];
 
-    public function addRepository(string $entityClass, EntityRepository $repository)
+    public function addRepository(string $entityClass, RepositoryInterface $repository)
     {
         $this->repositories[$entityClass] = $repository;
     }
 
-    public function getRepository(string $entityClass): EntityRepository
+    public function getRepository(string $entityClass): RepositoryInterface
     {
         return $this->repositories[$entityClass];
     }

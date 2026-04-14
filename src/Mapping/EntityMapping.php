@@ -1,11 +1,13 @@
 <?php
+
+declare(strict_types=1);
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 
-namespace TheSaleGroup\Restorm\Mapping;
+namespace Robwasripped\Restorm\Mapping;
 
 /**
  * Description of EntityMapping
@@ -24,27 +26,27 @@ class EntityMapping
     /**
      * @var string
      */
-    private $entityClass;
+    private readonly string $entityClass;
 
     /**
      * @var string
      */
-    private $repositoryName;
+    private readonly ?string $repositoryName;
 
     /**
      * @var array
      */
-    private $properties;
+    private readonly array $properties;
 
     /**
      * @var array
      */
-    private $paths;
+    private readonly ?array $paths;
 
     /**
      * @var string
      */
-    private $connection;
+    private readonly ?string $connection;
 
     /**
      * @var string
@@ -120,13 +122,15 @@ class EntityMapping
     
     public function getWritableFields()
     {
-        $writableFields = array();
+        $writableFields = [];
 
         foreach ($this->getProperties() as $propertyName => $propertyOptions) {
-            if (!isset($propertyOptions['read_only']) || $propertyOptions['read_only'] === false) {
-                $fieldName = $propertyOptions['map_from'] ?? $propertyName;
-                $writableFields[$fieldName] = $propertyOptions;
+            if (isset($propertyOptions['read_only']) && $propertyOptions['read_only'] === true) {
+                continue;
             }
+
+            $fieldName = $propertyOptions['map_from'] ?? $propertyName;
+            $writableFields[$fieldName] = $propertyOptions;
         }
 
         return $writableFields;

@@ -23,86 +23,53 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm;
+declare(strict_types=1);
 
-use TheSaleGroup\Restorm\Configuration\Configuration;
-use TheSaleGroup\Restorm\Mapping\EntityMappingRegister;
-use TheSaleGroup\Restorm\Connection\ConnectionRegister;
-use TheSaleGroup\Restorm\Normalizer\Normalizer;
-use TheSaleGroup\Restorm\Entity\Proxy;
-use TheSaleGroup\Restorm\Entity\EntityMetadataRegister;
-use TheSaleGroup\Restorm\Mapping\EntityBuilder;
+namespace Robwasripped\Restorm;
+
+use Robwasripped\Restorm\Configuration\Configuration;
+use Robwasripped\Restorm\Mapping\EntityMappingRegister;
+use Robwasripped\Restorm\Connection\ConnectionRegister;
+use Robwasripped\Restorm\Normalizer\Normalizer;
+use Robwasripped\Restorm\Entity\Proxy;
+use Robwasripped\Restorm\Entity\EntityMetadataRegister;
+use Robwasripped\Restorm\Mapping\EntityBuilder;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-use TheSaleGroup\Restorm\EntityStore;
+
 use ProxyManager\Factory\LazyLoadingGhostFactory;
-use TheSaleGroup\Restorm\Event\PrePersistEvent;
+use Robwasripped\Restorm\Event\PrePersistEvent;
 
 /**
- * Description of EntityManager
- *
  * @author Rob Treacy <email@roberttreacy.com>
  */
 class EntityManager
 {
+    private readonly RepositoryRegister $repositoryRegister;
 
-    /**
-     *
-     * @var RepositoryRegister
-     */
-    protected $repositoryRegister;
+    private readonly EntityMappingRegister $entityMappingRegister;
 
-    /**
-     *
-     * @var EntityMappingRegister
-     */
-    protected $entityMappingRegister;
+    private readonly EntityMetadataRegister $entityMetadataRegister;
 
-    /**
-     * @var EntityMetadataRegister
-     */
-    protected $entityMetadataRegister;
+    private readonly ConnectionRegister $connectionRegister;
 
-    /**
-     *
-     * @var ConnectionRegister
-     */
-    protected $connectionRegister;
+    private readonly EntityBuilder $entityBuilder;
 
-    /**
-     *
-     * @var EntityBuilder
-     */
-    protected $entityBuilder;
+    private readonly EventDispatcherInterface $eventDispatcher;
 
-    /**
-     *
-     * @var EventDispatcherInterface
-     */
-    protected $eventDispatcher;
+    private readonly EntityStore $entityStore;
 
-    /**
-     *
-     * @var EntityStore
-     */
-    protected $entityStore;
+    private readonly LazyLoadingGhostFactory $proxyFactory;
 
-    /**
-     * @var LazyLoadingGhostFactory
-     */
-    protected $proxyFactory;
+    private readonly Normalizer $normalizer;
 
-    /**
-     * @var Normalizer
-     */
-    protected $normalizer;
+    private readonly Proxy $proxy;
 
-    /**
-     * @var Prozy
-     */
-    protected $proxy;
-
-    protected function __construct(EntityMappingRegister $entityMappingRegister, ConnectionRegister $connectionRegister, array $dataTransformers, EventDispatcherInterface $eventDispatcher)
-    {
+    private function __construct(
+        EntityMappingRegister $entityMappingRegister,
+        ConnectionRegister $connectionRegister,
+        array $dataTransformers,
+        EventDispatcherInterface $eventDispatcher
+    ) {
         $this->entityMappingRegister = $entityMappingRegister;
         $this->connectionRegister = $connectionRegister;
         $this->eventDispatcher = $eventDispatcher;
@@ -119,12 +86,17 @@ class EntityManager
         $this->eventDispatcher->addSubscriber($this->proxy);
     }
 
-    public static function createFromConfiguration(Configuration $configuration): EntityManager
+    public static function createFromConfiguration(Configuration $configuration): self
     {
-        return new EntityManager($configuration->getEntityMappingRegister(), $configuration->getConnectionRegister(), $configuration->getDataTransformers(), $configuration->getEventDispatcher());
+        return new self(
+            $configuration->getEntityMappingRegister(),
+            $configuration->getConnectionRegister(),
+            $configuration->getDataTransformers(),
+            $configuration->getEventDispatcher()
+        );
     }
 
-    public function getRepository($entity): EntityRepository
+    public function getRepository(object|string $entity): RepositoryInterface
     {
         $entityClass = is_object($entity) ? get_class($entity) : $entity;
 
@@ -192,8 +164,7 @@ class EntityManager
             throw new Mapping\Exception\UnknownEntityException(get_class($entity));
         }
 
-        $prePersistEvent = new PrePersistEvent($entity, $entityMapping->getEntityClass());
-        $this->eventDispatcher->dispatch(PrePersistEvent::NAME, $prePersistEvent);
+        $this->eventDispatcher->dispatch(new PrePersistEvent($entity, $entityMapping->getEntityClass()));
 
         $knownState = $this->entityStore->getEntityData($entity);
 
@@ -209,7 +180,7 @@ class EntityManager
             $mappedCurrentState = array_intersect_key($currentState, $writableFields);
 
             // Diff arrays to find changes
-            $queryData = array_udiff_assoc($mappedCurrentState, (array) $knownState, function($current, $known) {
+            $queryData = array_udiff_assoc($mappedCurrentState, (array) $knownState, static function($current, $known) {
 
                 if (gettype($current) !== gettype($known)) {
                     return 1;

@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * The MIT License
  *
@@ -23,9 +25,9 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm\Connection;
+namespace Robwasripped\Restorm\Connection;
 
-use TheSaleGroup\Restorm\Connection\ConnectionInterface;
+
 
 /**
  * Description of ConnectionManager
@@ -34,7 +36,7 @@ use TheSaleGroup\Restorm\Connection\ConnectionInterface;
  */
 class ConnectionRegister
 {
-    private $connections = array();
+    private $connections = [];
 
     public function registerConnection(string $connectionName, ConnectionInterface $connection)
     {
@@ -42,14 +44,14 @@ class ConnectionRegister
     }
 
     /**
-     * 
+     *
      * @param string $connectionName
      * @return ConnectionInterface[]
-     * 
+     *
      */
     public function getConnections(string $connectionName): array
     {
-        $connections = array();
+        $connections = [];
         if (array_key_exists('_cache', $this->connections)) {
             $connections[] = $this->connections['_cache'];
         }

@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * The MIT License
  *
@@ -23,7 +25,7 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm\Event;
+namespace Robwasripped\Restorm\Event;
 
 use Symfony\Component\EventDispatcher\Event;
 

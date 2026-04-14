@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * The MIT License
  *
@@ -23,7 +25,7 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm\Mapping;
+namespace Robwasripped\Restorm\Mapping;
 
 /**
  * Description of EntityMappingRegister
@@ -56,9 +58,11 @@ class EntityMappingRegister
     public function findEntityMapping($entity): ?EntityMapping
     {
         foreach($this->entityMappings as $entityMapping) {
-            if(is_a($entity, $entityMapping->getEntityClass(), true)) {
-                return $entityMapping;
+            if(!is_a($entity, $entityMapping->getEntityClass(), true)) {
+                continue;
             }
+
+            return $entityMapping;
         }
         
         return null;

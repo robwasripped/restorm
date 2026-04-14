@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * The MIT License
  *
@@ -23,12 +25,12 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm\Query;
+namespace Robwasripped\Restorm\Query;
 
-use TheSaleGroup\Restorm\EntityManager;
-use TheSaleGroup\Restorm\Query\Query;
-use TheSaleGroup\Restorm\Mapping\EntityMapping;
-use TheSaleGroup\Restorm\Mapping\Exception\UnknownEntityException;
+use Robwasripped\Restorm\EntityManager;
+
+use Robwasripped\Restorm\Mapping\EntityMapping;
+use Robwasripped\Restorm\Mapping\Exception\UnknownEntityException;
 
 /**
  * Description of QueryBuilder
@@ -37,10 +39,7 @@ use TheSaleGroup\Restorm\Mapping\Exception\UnknownEntityException;
  */
 class QueryBuilder
 {
-    /**
-     * @var EntityManager
-     */
-    private $entityManager;
+    private readonly EntityManager $entityManager;
     private $entity;
 
     /**
@@ -188,7 +187,7 @@ class QueryBuilder
                 break;
         }
 
-        $path = preg_replace_callback('/{([^}]*)}/', function($matches) use ($identifierName) {
+        return preg_replace_callback('/{([^}]*)}/', function($matches) use ($identifierName) {
 
             $entityMetadata = $this->entityManager->getEntityMetadataRegister()->getEntityMetadata($this->entity);
 
@@ -204,8 +203,6 @@ class QueryBuilder
             }
             return $value;
         }, $this->entityMapping->getpath($pathLabel));
-
-        return $path;
     }
 
     public function getQuery(): Query

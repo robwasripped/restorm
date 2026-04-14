@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * The MIT License
  *
@@ -23,9 +25,9 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm\Normalizer\Transformer;
+namespace Robwasripped\Restorm\Normalizer\Transformer;
 
-use TheSaleGroup\Restorm\EntityManager;
+use Robwasripped\Restorm\EntityManager;
 
 /**
  *

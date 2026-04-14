@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * The MIT License
  *
@@ -23,11 +25,11 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm\Connection;
+namespace Robwasripped\Restorm\Connection;
 
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-use TheSaleGroup\Restorm\Event\PreQueryEvent;
-use TheSaleGroup\Restorm\Query\Query;
+use Robwasripped\Restorm\Event\PreQueryEvent;
+use Robwasripped\Restorm\Query\Query;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Psr7\Response;
@@ -39,20 +41,11 @@ use GuzzleHttp\Psr7\Response;
  */
 class GuzzleConnection implements ConnectionInterface, PaginatedConnectionInterface
 {
-    /**
-     * @var Client
-     */
-    private $guzzleClient;
+    private readonly Client $guzzleClient;
 
-    /**
-     * @var array
-     */
-    private $config;
+    private readonly array $config;
 
-    /**
-     * @var EventDispatcherInterface
-     */
-    private $eventDispatcher;
+    private readonly EventDispatcherInterface $eventDispatcher;
 
     /**
      *

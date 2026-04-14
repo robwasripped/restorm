@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * The MIT License
  *
@@ -24,13 +26,13 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm\Query;
+namespace Robwasripped\Restorm\Query;
 
-use TheSaleGroup\Restorm\Connection\ConnectionInterface;
-use TheSaleGroup\Restorm\Mapping\EntityBuilder;
-use TheSaleGroup\Restorm\EntityCollection;
-use TheSaleGroup\Restorm\PaginatedCollection;
-use TheSaleGroup\Restorm\Connection\PaginatedConnectionInterface;
+use Robwasripped\Restorm\Connection\ConnectionInterface;
+use Robwasripped\Restorm\Mapping\EntityBuilder;
+use Robwasripped\Restorm\EntityCollection;
+use Robwasripped\Restorm\PaginatedCollection;
+use Robwasripped\Restorm\Connection\PaginatedConnectionInterface;
 
 /**
  * Description of Query
@@ -92,17 +94,14 @@ class Query {
     /**
      * @var ConnectionInterface[]
      */
-    private $connections;
+    private readonly array $connections;
 
-    /**
-     * @var EntityBuilder
-     */
-    private $entityBuilder;
+    private readonly EntityBuilder $entityBuilder;
 
     /**
      * @var string
      */
-    private $entityClass;
+    private readonly string $entityClass;
 
     public function __construct(array $connections, EntityBuilder $entityBuilder, string $entityClass, string $path, string $method, $data, array $filter = [], int $page = 0, int $perPage = 0, array $sort = []) {
         $this->connections = $connections;
@@ -141,7 +140,7 @@ class Query {
 
                 $entityCollection = $this->page == 0 || ($this->perPage == 0 && $this->page == 0) ? new PaginatedCollection($this, true, $expectedTotalSum, $expectedPageSum, $expectedCurrentPage) : new EntityCollection([], $expectedTotalSum, $expectedPageSum, $expectedCurrentPage);
 
-                $entityData = is_array($result) ? $result : array($result);
+                $entityData = is_array($result) ? $result : [$result];
 
                 foreach ($entityData as $singleResult) {
                     $entityCollection[] = $this->buildEntity($singleResult);

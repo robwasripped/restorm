@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * The MIT License
  *
@@ -23,15 +25,15 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm\Mapping;
+namespace Robwasripped\Restorm\Mapping;
 
-use TheSaleGroup\Restorm\Mapping\EntityMappingRegister;
-use TheSaleGroup\Restorm\Entity\EntityMetadataRegister;
-use TheSaleGroup\Restorm\Entity\EntityMetadata;
-use TheSaleGroup\Restorm\Normalizer\Normalizer;
+
+use Robwasripped\Restorm\Entity\EntityMetadataRegister;
+use Robwasripped\Restorm\Entity\EntityMetadata;
+use Robwasripped\Restorm\Normalizer\Normalizer;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-use TheSaleGroup\Restorm\Event\PreBuildEvent;
-use TheSaleGroup\Restorm\Event\PostBuildEvent;
+use Robwasripped\Restorm\Event\PreBuildEvent;
+use Robwasripped\Restorm\Event\PostBuildEvent;
 
 /**
  * Description of EntityBuilder
@@ -40,25 +42,13 @@ use TheSaleGroup\Restorm\Event\PostBuildEvent;
  */
 class EntityBuilder
 {
-    /**
-     * @var EntityMappingRegister
-     */
-    private $entityMappingRegister;
+    private readonly EntityMappingRegister $entityMappingRegister;
 
-    /**
-     * @var EntityMetadataRegister
-     */
-    private $entityMetadataRegister;
+    private readonly EntityMetadataRegister $entityMetadataRegister;
 
-    /**
-     * @var Normalizer
-     */
-    private $normalizer;
+    private readonly Normalizer $normalizer;
 
-    /**
-     * @var EventDispatcherInterface
-     */
-    private $eventDispatcher;
+    private readonly EventDispatcherInterface $eventDispatcher;
 
     public function __construct(EntityMappingRegister $entityMappingRegister, EntityMetadataRegister $entityMetadataRegister, Normalizer $normalizer, EventDispatcherInterface $eventDispatcher)
     {

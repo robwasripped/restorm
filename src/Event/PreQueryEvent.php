@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * The MIT License
  *
@@ -23,10 +25,10 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm\Event;
+namespace Robwasripped\Restorm\Event;
 
 use Symfony\Component\EventDispatcher\Event;
-use TheSaleGroup\Restorm\Query\Query;
+use Robwasripped\Restorm\Query\Query;
 
 class PreQueryEvent extends Event
 {

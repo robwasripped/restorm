@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * The MIT License
  *
@@ -23,14 +25,14 @@
  * THE SOFTWARE.
  */
 
-namespace TheSaleGroup\Restorm\Configuration;
+namespace Robwasripped\Restorm\Configuration;
 
 use Symfony\Component\Yaml\Yaml;
-use TheSaleGroup\Restorm\Mapping\EntityMappingRegister;
-use TheSaleGroup\Restorm\Mapping\EntityMapping;
-use TheSaleGroup\Restorm\Connection\ConnectionRegister;
-use TheSaleGroup\Restorm\Normalizer\Transformer\TransformerInterface;
-use TheSaleGroup\Restorm\Connection\GuzzleConnection;
+use Robwasripped\Restorm\Mapping\EntityMappingRegister;
+use Robwasripped\Restorm\Mapping\EntityMapping;
+use Robwasripped\Restorm\Connection\ConnectionRegister;
+use Robwasripped\Restorm\Normalizer\Transformer\TransformerInterface;
+use Robwasripped\Restorm\Connection\GuzzleConnection;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
@@ -49,22 +51,16 @@ class Configuration
     /**
      * @var array
      */
-    private $configuration;
+    private readonly array $configuration;
 
-    /**
-     * @var EntityMappingRegister
-     */
-    private $entityMappingRegister;
+    private readonly EntityMappingRegister $entityMappingRegister;
 
-    /**
-     * @var ConnectionRegister
-     */
-    private $connectionRegister;
+    private readonly ConnectionRegister $connectionRegister;
 
     /**
      * @var TransformerInterface[]
      */
-    private $dataTransformers = array();
+    private readonly array $dataTransformers;
 
     /**
      * @var EventDispatcherInterface
@@ -170,7 +166,7 @@ class Configuration
 
     private function buildDataTransformers(): array
     {
-        $transformers = array();
+        $transformers = [];
 
         foreach ($this->configuration['transformers'] as $transformerType => $transformerClass) {
             $transformers[$transformerType] = new $transformerClass;
