@@ -33,16 +33,10 @@ use Robwasripped\Restorm\Query\Query;
 class PreQueryEvent extends Event
 {
     /**
-     * @var Query
-     */
-    private $query;
-
-    /**
      * @param Query $query
      */
-    public function __construct(Query $query)
+    public function __construct(private Query $query)
     {
-        $this->query = $query;
     }
 
     /**

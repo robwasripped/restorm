@@ -39,7 +39,6 @@ use Robwasripped\Restorm\Mapping\Exception\UnknownEntityException;
  */
 class QueryBuilder
 {
-    private readonly EntityManager $entityManager;
     private $entity;
 
     /**
@@ -82,9 +81,8 @@ class QueryBuilder
      */
     private $perPage = 0;
 
-    public function __construct(EntityManager $entityManager)
+    public function __construct(private readonly EntityManager $entityManager)
     {
-        $this->entityManager = $entityManager;
     }
 
     public function get(string $entityClass): self

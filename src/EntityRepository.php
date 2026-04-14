@@ -37,14 +37,8 @@ use Robwasripped\Restorm\Query\QueryBuilder;
  */
 class EntityRepository implements RepositoryInterface
 {
-    protected readonly EntityManager $entityManager;
-    
-    protected readonly string $entityClass;
-
-    public function __construct(EntityManager $entityManager, string $entityClass)
+    public function __construct(protected readonly EntityManager $entityManager, protected readonly string $entityClass)
     {
-        $this->entityManager = $entityManager;
-        $this->entityClass = $entityClass;
     }
 
     public function find(array $filters, $page = 1, $limit = 0)

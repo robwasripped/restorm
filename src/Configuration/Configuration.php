@@ -48,11 +48,6 @@ class Configuration
      */
     private static $instance;
 
-    /**
-     * @var array
-     */
-    private readonly array $configuration;
-
     private readonly EntityMappingRegister $entityMappingRegister;
 
     private readonly ConnectionRegister $connectionRegister;
@@ -67,10 +62,8 @@ class Configuration
      */
     private $eventDispatcher;
 
-    private function __construct(array $configuration, ?EventDispatcherInterface $eventDispatcher = null)
+    private function __construct(private readonly array $configuration, ?EventDispatcherInterface $eventDispatcher = null)
     {
-        $this->configuration = $configuration;
-
         $this->eventDispatcher = $eventDispatcher ?? new EventDispatcher;
         $this->entityMappingRegister = $this->buildEntityMappingRegister();
         $this->connectionRegister = $this->buildConnectionRegister();

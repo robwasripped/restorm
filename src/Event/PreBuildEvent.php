@@ -36,16 +36,10 @@ use Symfony\Contracts\EventDispatcher\Event;
  */
 class PreBuildEvent extends Event
 {
-    private $entityClass;
-    private $data;
-    private $partialData;
     private $entity;
 
-    public function __construct($entityClass, $data, bool $partialData)
+    public function __construct(private $entityClass, private $data, private bool $partialData)
     {
-        $this->entityClass = $entityClass;
-        $this->data = $data;
-        $this->partialData = $partialData;
     }
     
     public function isPartialData(): bool

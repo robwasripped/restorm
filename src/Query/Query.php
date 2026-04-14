@@ -91,22 +91,10 @@ class Query {
      */
     private $headers = [];
 
-    /**
+    public function __construct(/**
      * @var ConnectionInterface[]
      */
-    private readonly array $connections;
-
-    private readonly EntityBuilder $entityBuilder;
-
-    /**
-     * @var string
-     */
-    private readonly string $entityClass;
-
-    public function __construct(array $connections, EntityBuilder $entityBuilder, string $entityClass, string $path, string $method, $data, array $filter = [], int $page = 0, int $perPage = 0, array $sort = []) {
-        $this->connections = $connections;
-        $this->entityBuilder = $entityBuilder;
-        $this->entityClass = $entityClass;
+    private readonly array $connections, private readonly EntityBuilder $entityBuilder, private readonly string $entityClass, string $path, string $method, $data, array $filter = [], int $page = 0, int $perPage = 0, array $sort = []) {
         $this->setPath($path);
         $this->setMethod($method);
         $this->setData($data);

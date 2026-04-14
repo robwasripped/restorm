@@ -40,31 +40,9 @@ class EntityCollection implements \ArrayAccess, \Iterator, \Countable
      */
     protected $entities;
 
-    /**
-     *
-     * @var int|null
-     */
-    private $expectedTotalItemSum;
-
-    /**
-     *
-     * @var int|null
-     */
-    private $expectedPageItemSum;
-
-    /**
-     *
-     * @var int|null
-     */
-    private $expectedCurrentPage;
-
-    public function __construct(array $entities = [], ?int $totalItemSum = null, ?int $pageItemSum = null, ?int $currentPage = null)
+    public function __construct(array $entities = [], private ?int $expectedTotalItemSum = null, private ?int $expectedPageItemSum = null, private ?int $expectedCurrentPage = null)
     {
         $this->entities = $entities;
-
-        $this->expectedTotalItemSum = $totalItemSum;
-        $this->expectedPageItemSum = $pageItemSum;
-        $this->expectedCurrentPage = $currentPage;
     }
 
     public function addEntity($entity)
@@ -98,7 +76,7 @@ class EntityCollection implements \ArrayAccess, \Iterator, \Countable
 
     public function offsetExists($offset): bool
     {
-        return key_exists($offset, $this->entities);
+        return array_key_exists($offset, $this->entities);
     }
 
     public function offsetGet($offset)

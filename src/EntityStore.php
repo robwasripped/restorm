@@ -45,8 +45,6 @@ use Robwasripped\Restorm\Mapping\Exception\UnknownEntityException;
  */
 class EntityStore implements EventSubscriberInterface
 {
-    private readonly EntityMappingRegister $entityMappingRegister;
-
     /**
      * @var array
      */
@@ -56,14 +54,10 @@ class EntityStore implements EventSubscriberInterface
      * @var array
      */
     private $entityInstances;
-
-    private readonly EntityMetadataRegister $entityMetadataRegister;
     private $newEntity;
 
-    public function __construct(EntityMappingRegister $entityMappingRegister, EntityMetadataRegister $entityMetadataRegister)
+    public function __construct(private readonly EntityMappingRegister $entityMappingRegister, private readonly EntityMetadataRegister $entityMetadataRegister)
     {
-        $this->entityMappingRegister = $entityMappingRegister;
-        $this->entityMetadataRegister = $entityMetadataRegister;
     }
 
     public static function getSubscribedEvents(): array

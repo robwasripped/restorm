@@ -36,17 +36,8 @@ use Symfony\Contracts\EventDispatcher\Event;
  */
 class PrePersistEvent extends Event implements PopulatedEntityEventInterface
 {
-    private $entity;
-
-    /**
-     * @var string
-     */
-    private $entityClass;
-
-    public function __construct($entity, string $entityClass)
+    public function __construct(private $entity, private string $entityClass)
     {
-        $this->entity = $entity;
-        $this->entityClass = $entityClass;
     }
 
     public function getEntity()

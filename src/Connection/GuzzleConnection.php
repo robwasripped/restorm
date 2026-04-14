@@ -43,10 +43,6 @@ class GuzzleConnection implements ConnectionInterface, PaginatedConnectionInterf
 {
     private readonly Client $guzzleClient;
 
-    private readonly array $config;
-
-    private readonly EventDispatcherInterface $eventDispatcher;
-
     /**
      *
      * @var int|null
@@ -65,12 +61,10 @@ class GuzzleConnection implements ConnectionInterface, PaginatedConnectionInterf
      */
     private $currentPage;
 
-    public function __construct(array $config, EventDispatcherInterface $eventDispatcher)
+    public function __construct(private readonly array $config, private readonly EventDispatcherInterface $eventDispatcher)
     {
-        $this->config = $config;
-        $this->eventDispatcher = $eventDispatcher;
         $this->guzzleClient = new Client([
-            'base_uri' => rtrim($config['base_uri'], '/') . '/'
+            'base_uri' => rtrim($this->config['base_uri'], '/') . '/'
         ]);
     }
 
