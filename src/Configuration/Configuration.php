@@ -169,7 +169,7 @@ class Configuration
         $transformers = [];
 
         foreach ($this->configuration['transformers'] as $transformerType => $transformerClass) {
-            $transformers[$transformerType] = new $transformerClass;
+            $transformers[$transformerType] = (new $transformerClass);
         }
 
         return $transformers;

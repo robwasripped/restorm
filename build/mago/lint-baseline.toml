@@ -1,0 +1,223 @@
+variant = "loose"
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "no-shorthand-ternary"
+message = "Use of the shorthand ternary operator."
+count = 1
+
+[[issues]]
+file = "src/Connection/GuzzleConnection.php"
+code = "no-isset"
+message = "Use of the `isset` construct."
+count = 5
+
+[[issues]]
+file = "src/Entity/EntityMetadata.php"
+code = "no-isset"
+message = "Use of the `isset` construct."
+count = 1
+
+[[issues]]
+file = "src/Entity/EntityMetadataRegister.php"
+code = "strict-behavior"
+message = "Call to `in_array` must enforce strict comparison."
+count = 1
+
+[[issues]]
+file = "src/Entity/Proxy.php"
+code = "prefer-arrow-function"
+message = "This closure can be simplified to a more concise arrow function."
+count = 1
+
+[[issues]]
+file = "src/Entity/Proxy.php"
+code = "strict-behavior"
+message = "Call to `array_search` must enforce strict comparison."
+count = 1
+
+[[issues]]
+file = "src/EntityCollection.php"
+code = "no-alias-function"
+message = "Function alias `key_exists` should not be used."
+count = 1
+
+[[issues]]
+file = "src/EntityCollection.php"
+code = "no-assign-in-condition"
+message = "Avoid assignments in conditions."
+count = 1
+
+[[issues]]
+file = "src/EntityCollection.php"
+code = "no-else-clause"
+message = "Avoid `else` clauses."
+count = 1
+
+[[issues]]
+file = "src/EntityCollection.php"
+code = "no-empty"
+message = "Use of the `empty` construct."
+count = 1
+
+[[issues]]
+file = "src/EntityCollection.php"
+code = "strict-behavior"
+message = "Call to `in_array` must enforce strict comparison."
+count = 2
+
+[[issues]]
+file = "src/EntityManager.php"
+code = "halstead"
+message = "Method has a high halstead difficulty"
+count = 1
+
+[[issues]]
+file = "src/EntityManager.php"
+code = "identity-comparison"
+message = "Use identity inequality `!==` instead of inequality comparison `!=`."
+count = 1
+
+[[issues]]
+file = "src/EntityManager.php"
+code = "no-else-clause"
+message = "Avoid `else` clauses."
+count = 2
+
+[[issues]]
+file = "src/EntityManager.php"
+code = "no-else-clause"
+message = "Avoid `elseif` clauses."
+count = 1
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "cyclomatic-complexity"
+message = "Class has high complexity."
+count = 1
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "no-else-clause"
+message = "Avoid `else` clauses."
+count = 1
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "no-else-clause"
+message = "Avoid `elseif` clauses."
+count = 1
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "no-isset"
+message = "Use of the `isset` construct."
+count = 3
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "prefer-arrow-function"
+message = "This closure can be simplified to a more concise arrow function."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityBuilder.php"
+code = "no-boolean-flag-parameter"
+message = "Avoid boolean flag parameters."
+count = 2
+
+[[issues]]
+file = "src/Mapping/EntityBuilder.php"
+code = "no-shorthand-ternary"
+message = "Use of the shorthand ternary operator."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityMapping.php"
+code = "no-isset"
+message = "Use of the `isset` construct."
+count = 2
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "cyclomatic-complexity"
+message = "Class has high complexity."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "kan-defect"
+message = "Class has a high kan defect score."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "no-boolean-flag-parameter"
+message = "Avoid boolean flag parameters."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "no-else-clause"
+message = "Avoid `else` clauses."
+count = 7
+
+[[issues]]
+file = "src/Normalizer/Transformer/EntityTransformer.php"
+code = "cyclomatic-complexity"
+message = "Class has high complexity."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Transformer/EntityTransformer.php"
+code = "no-boolean-flag-parameter"
+message = "Avoid boolean flag parameters."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Transformer/EntityTransformer.php"
+code = "no-else-clause"
+message = "Avoid `else` clauses."
+count = 2
+
+[[issues]]
+file = "src/Normalizer/Transformer/ScalarTransformer.php"
+code = "no-assign-in-condition"
+message = "Avoid assignments in conditions."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Transformer/ScalarTransformer.php"
+code = "no-else-clause"
+message = "Avoid `else` clauses."
+count = 1
+
+[[issues]]
+file = "src/PaginatedCollection.php"
+code = "no-shorthand-ternary"
+message = "Use of the shorthand ternary operator."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "excessive-parameter-list"
+message = "Parameter list is too long."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "identity-comparison"
+message = "Use identity comparison `===` instead of equality comparison `==`."
+count = 3
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "no-boolean-flag-parameter"
+message = "Avoid boolean flag parameters."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "no-else-clause"
+message = "Avoid `else` clauses."
+count = 1
