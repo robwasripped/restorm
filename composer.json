@@ -13,7 +13,8 @@
         "guzzlehttp/guzzle": "^6.0 || ^7.0",
         "symfony/yaml": "^6 || ^7 || ^8",
         "symfony/event-dispatcher": "^6 || ^7 || ^8",
-        "friendsofphp/proxy-manager-lts": "^1.0"
+        "friendsofphp/proxy-manager-lts": "^1.0",
+        "symfony/event-dispatcher-contracts": "^3.6"
     },
     "autoload": {
         "psr-4": {

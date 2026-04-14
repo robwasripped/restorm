@@ -31,9 +31,9 @@ namespace Robwasripped\Restorm\Mapping;
 use Robwasripped\Restorm\Entity\EntityMetadataRegister;
 use Robwasripped\Restorm\Entity\EntityMetadata;
 use Robwasripped\Restorm\Normalizer\Normalizer;
-use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Robwasripped\Restorm\Event\PreBuildEvent;
 use Robwasripped\Restorm\Event\PostBuildEvent;
+use Symfony\Contracts\EventDispatcher\EventDispatcherInterface;
 
 /**
  * Description of EntityBuilder
@@ -42,33 +42,26 @@ use Robwasripped\Restorm\Event\PostBuildEvent;
  */
 class EntityBuilder
 {
-    private readonly EntityMappingRegister $entityMappingRegister;
-
-    private readonly EntityMetadataRegister $entityMetadataRegister;
-
-    private readonly Normalizer $normalizer;
-
-    private readonly EventDispatcherInterface $eventDispatcher;
-
-    public function __construct(EntityMappingRegister $entityMappingRegister, EntityMetadataRegister $entityMetadataRegister, Normalizer $normalizer, EventDispatcherInterface $eventDispatcher)
+    public function __construct(
+        private readonly EntityMappingRegister $entityMappingRegister,
+        private readonly EntityMetadataRegister $entityMetadataRegister,
+        private readonly Normalizer $normalizer,
+        private readonly EventDispatcherInterface $eventDispatcher,
+    )
     {
-        $this->entityMappingRegister = $entityMappingRegister;
-        $this->entityMetadataRegister = $entityMetadataRegister;
-        $this->normalizer = $normalizer;
-        $this->eventDispatcher = $eventDispatcher;
     }
 
     public function buildEntity(string $entityClass, $entityData, bool $partialData = false)
     {
         $preBuildEvent = new PreBuildEvent($entityClass, $entityData, $partialData);
-        $this->eventDispatcher->dispatch(PreBuildEvent::NAME, $preBuildEvent);
+        $this->eventDispatcher->dispatch($preBuildEvent);
 
-        $entity = $preBuildEvent->getEntity() ?: $this->createEntity($entityClass);
+        $entity = $preBuildEvent->getEntity() ?? $this->createEntity($entityClass);
 
         $this->populateEntity($entity, $preBuildEvent->getData(), $partialData);
 
         $postBuildEvent = new PostBuildEvent($entity, $entityClass);
-        $this->eventDispatcher->dispatch(PostBuildEvent::NAME, $postBuildEvent);
+        $this->eventDispatcher->dispatch($postBuildEvent);
 
         return $entity;
     }

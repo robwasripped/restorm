@@ -1,0 +1,65 @@
+name: Mago
+
+on:
+  pull_request:
+
+jobs:
+  mago:
+    name: ${{ matrix.name }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Lint
+            command: lint
+          - name: Analyse
+            command: analyze
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          tools: composer
+          coverage: none
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v4
+        with:
+          path: vendor
+          key: ${{ runner.os }}-composer-${{ hashFiles('composer.json') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress --no-interaction
+
+      - name: Install Mago
+        run: |
+          curl --proto '=https' --tlsv1.2 -sSf https://carthage.software/mago.sh | bash
+          echo "${HOME}/.local/bin" >> "${GITHUB_PATH}"
+
+      - name: ${{ matrix.name }}
+        id: mago
+        run: mago ${{ matrix.command }}
+        continue-on-error: true
+
+      - name: ${{ matrix.name }} summary
+        if: steps.mago.outcome == 'failure'
+        run: |
+          echo "## Mago ${{ matrix.name }} issues" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          mago ${{ matrix.command }} --reporting-format=medium >> "$GITHUB_STEP_SUMMARY" 2>&1 || true
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Fail on issues
+        if: steps.mago.outcome == 'failure'
+        run: exit 1

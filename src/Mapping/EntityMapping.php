@@ -26,40 +26,16 @@ class EntityMapping
     /**
      * @var string
      */
-    private readonly string $entityClass;
-
-    /**
-     * @var string
-     */
-    private readonly ?string $repositoryName;
-
-    /**
-     * @var array
-     */
-    private readonly array $properties;
-
-    /**
-     * @var array
-     */
-    private readonly ?array $paths;
-
-    /**
-     * @var string
-     */
-    private readonly ?string $connection;
-
-    /**
-     * @var string
-     */
     private $identifier;
 
-    public function __construct(string $entityClass, ?string $repositoryName, array $properties, ?array $paths, ?string $connection)
+    public function __construct(
+        private readonly string $entityClass,
+        private readonly ?string $repositoryName,
+        private readonly array $properties,
+        private readonly ?array $paths,
+        private readonly ?string $connection,
+    )
     {
-        $this->entityClass = $entityClass;
-        $this->repositoryName = $repositoryName;
-        $this->properties = $properties;
-        $this->paths = $paths;
-        $this->connection = $connection;
     }
 
     public function getEntityClass()
@@ -78,7 +54,7 @@ class EntityMapping
 
             foreach ($this->properties as $propertyName => $property) {
 
-                if (!isset($property['identifier']) || !$property['identifier'] === true) {
+                if (!array_key_exists('identifier', $property) || !$property['identifier'] === true) {
                     continue;
                 }
 
@@ -125,7 +101,7 @@ class EntityMapping
         $writableFields = [];
 
         foreach ($this->getProperties() as $propertyName => $propertyOptions) {
-            if (isset($propertyOptions['read_only']) && $propertyOptions['read_only'] === true) {
+            if (array_key_exists('read_only', $propertyOptions) && $propertyOptions['read_only'] === true) {
                 continue;
             }
 

@@ -34,7 +34,7 @@ use Robwasripped\Restorm\Connection\ConnectionRegister;
 use Robwasripped\Restorm\Normalizer\Transformer\TransformerInterface;
 use Robwasripped\Restorm\Connection\GuzzleConnection;
 use Symfony\Component\EventDispatcher\EventDispatcher;
-use Symfony\Component\EventDispatcher\EventDispatcherInterface;
+use Symfony\Contracts\EventDispatcher\EventDispatcherInterface;
 
 /**
  * Description of Configuration
@@ -47,11 +47,6 @@ class Configuration
      * @var Configuration
      */
     private static $instance;
-
-    /**
-     * @var array
-     */
-    private readonly array $configuration;
 
     private readonly EntityMappingRegister $entityMappingRegister;
 
@@ -67,11 +62,9 @@ class Configuration
      */
     private $eventDispatcher;
 
-    private function __construct(array $configuration, EventDispatcherInterface $eventDispatcher = null)
+    private function __construct(private readonly array $configuration, ?EventDispatcherInterface $eventDispatcher = null)
     {
-        $this->configuration = $configuration;
-
-        $this->eventDispatcher = $eventDispatcher ?: new EventDispatcher;
+        $this->eventDispatcher = $eventDispatcher ?? new EventDispatcher;
         $this->entityMappingRegister = $this->buildEntityMappingRegister();
         $this->connectionRegister = $this->buildConnectionRegister();
         $this->dataTransformers = $this->buildDataTransformers();

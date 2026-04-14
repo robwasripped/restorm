@@ -27,7 +27,7 @@ declare(strict_types=1);
 
 namespace Robwasripped\Restorm\Event;
 
-use Symfony\Component\EventDispatcher\Event;
+use Symfony\Contracts\EventDispatcher\Event;
 
 /**
  * Description of PostBuildEvent
@@ -36,19 +36,8 @@ use Symfony\Component\EventDispatcher\Event;
  */
 class PostBuildEvent extends Event implements PopulatedEntityEventInterface
 {
-    const NAME = 'restorm.post_build';
-
-    private $entity;
-
-    /**
-     * @var string
-     */
-    private $entityClass;
-
-    public function __construct($entity, string $entityClass)
+    public function __construct(private $entity, private string $entityClass)
     {
-        $this->entity = $entity;
-        $this->entityClass = $entityClass;
     }
 
     public function getEntityClass(): string

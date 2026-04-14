@@ -42,16 +42,12 @@ use Robwasripped\Restorm\PaginatedCollection;
 class Normalizer
 {
 
-    /**
+    public function __construct(EntityManager $entityManager, /**
      * @var TransformerInterface[]
      */
-    private $transformers;
-
-    public function __construct(EntityManager $entityManager, array $transformers)
+    private array $transformers)
     {
-        $this->transformers = $transformers;
-
-        foreach ($transformers as $transformer) {
+        foreach ($this->transformers as $transformer) {
             if (!$transformer instanceof AdvancedTransformerInterface) {
                 continue;
             }

@@ -12,6 +12,7 @@ excludes = []
 preset = "default"
 
 [linter]
+baseline = "build/mago/lint-baseline.toml"
 integrations = ["symfony"]
 
 [linter.rules]
@@ -22,6 +23,7 @@ too-many-properties = { enabled = false }
 too-many-methods = { enabled = false }
 
 [analyzer]
+baseline = "build/mago/analysis-baseline.toml"
 plugins = []
 find-unused-definitions = true
 find-unused-expressions = true

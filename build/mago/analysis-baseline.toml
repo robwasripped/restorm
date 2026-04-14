@@ -1,0 +1,2107 @@
+variant = "loose"
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "impossible-condition"
+message = "This condition (type `false`) will always evaluate to false."
+count = 1
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "imprecise-type"
+message = "Type `array` in parameter `$configuration` is imprecise, equivalent to `array<array-key, mixed>`."
+count = 2
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "imprecise-type"
+message = "Type `array` in return type of `buildDataTransformers` is imprecise, equivalent to `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "imprecise-type"
+message = "Type `array` in return type of `getDataTransformers` is imprecise, equivalent to `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "invalid-argument"
+message = 'Invalid argument type for argument #2 of `symfony\component\yaml\yaml::parse`: expected `int(0)|int(10)|int(12)|int(14)|int(2)|int(256)|int(258)|int(260)|int(262)|int(264)|int(266)|int(268)|int(270)|int(288)|int(290)|int(292)|int(294)|int(296)|int(298)|int(300)|int(302)|int(32)|int(34)|int(36)|int(38)|int(4)|int(40)|int(42)|int(44)|int(46)|int(512)|int(514)|int(516)|int(518)|int(520)|int(522)|int(524)|int(526)|int(544)|int(546)|int(548)|int(550)|int(552)|int(554)|int(556)|int(558)|int(6)|int(768)|int(770)|int(772)|int(774)|int(776)|int(778)|int(780)|int(782)|int(8)|int(800)|int(802)|int(804)|int(806)|int(808)|int(810)|int(812)|int(814)`, but found `int(16)`.'
+count = 1
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "invalid-iterator"
+message = "The expression provided to `foreach` is not iterable. It resolved to type `mixed`, which is not iterable."
+count = 1
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "invalid-iterator"
+message = "The expression provided to `foreach` is not iterable. It resolved to type `nonnull`, which is not iterable."
+count = 2
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "missing-return-type"
+message = "Function `setEventDispatcher` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `Robwasripped\Restorm\Connection\ConnectionRegister::registerconnection`: expected `string`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `robwasripped\restorm\configuration\configuration::__construct`: expected `array<array-key, mixed>`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `robwasripped\restorm\connection\guzzleconnection::__construct`: expected `array<array-key, mixed>`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `robwasripped\restorm\mapping\entitymapping::__construct`: expected `string`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #2 of `robwasripped\restorm\mapping\entitymapping::__construct`: expected `null|string`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #3 of `robwasripped\restorm\mapping\entitymapping::__construct`: expected `array<array-key, mixed>`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #4 of `robwasripped\restorm\mapping\entitymapping::__construct`: expected `array<array-key, mixed>|null`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #5 of `robwasripped\restorm\mapping\entitymapping::__construct`: expected `null|string`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "mixed-array-access"
+message = "Unsafe array access on type `mixed`."
+count = 4
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "mixed-array-index"
+message = "Invalid index type `mixed` used for array access on `array<array-key, object>`."
+count = 1
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 7
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "mixed-assignment"
+message = "Assigning `nonnull` type to a variable may lead to unexpected behavior."
+count = 2
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "mixed-property-type-coercion"
+message = 'A value with a less specific type `array<array-key, mixed>` is being assigned to property `$$dataTransformers` (array<array-key, Robwasripped\Restorm\Normalizer\Transformer\TransformerInterface>).'
+count = 1
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "possibly-false-argument"
+message = 'Argument #1 of method `symfony\component\yaml\yaml::parse` is possibly `false`, but parameter type `string` does not accept it.'
+count = 1
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "possibly-undefined-string-array-index"
+message = "Possibly undefined array key `string('transformers')` accessed on `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "redundant-condition"
+message = 'This condition (type `Robwasripped\Restorm\Configuration\Configuration`) will always evaluate to true.'
+count = 2
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Exception` in `Robwasripped\Restorm\Configuration\Configuration::buildFromYaml`.'
+count = 1
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Robwasripped\Restorm\Configuration\Exception\ConfigurationAlreadyInitialisedException` in `Robwasripped\Restorm\Configuration\Configuration::buildFromArray`.'
+count = 1
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Robwasripped\Restorm\Configuration\Exception\ConfigurationAlreadyInitialisedException` in `Robwasripped\Restorm\Configuration\Configuration::buildFromYaml`.'
+count = 1
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Robwasripped\Restorm\Configuration\Exception\ConfigurationUnitialisedException` in `Robwasripped\Restorm\Configuration\Configuration::getInstance`.'
+count = 1
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Symfony\Component\Yaml\Exception\ParseException` in `Robwasripped\Restorm\Configuration\Configuration::buildFromYaml`.'
+count = 1
+
+[[issues]]
+file = "src/Configuration/Configuration.php"
+code = "unknown-class-instantiation"
+message = "Cannot determine the concrete class for instantiation."
+count = 1
+
+[[issues]]
+file = "src/Connection/ConnectionInterface.php"
+code = "missing-return-type"
+message = "Function `handleQuery` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Connection/ConnectionRegister.php"
+code = "less-specific-nested-return-statement"
+message = '''Returned type `non-empty-list<mixed>` is less specific than the declared return type `array<array-key, Robwasripped\Restorm\Connection\ConnectionInterface>` for function `robwasripped\restorm\connection\connectionregister::getconnections` due to nested 'mixed'.'''
+count = 1
+
+[[issues]]
+file = "src/Connection/ConnectionRegister.php"
+code = "missing-property-type"
+message = "Property `$connections` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Connection/ConnectionRegister.php"
+code = "missing-return-type"
+message = "Function `registerConnection` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Connection/ConnectionRegister.php"
+code = "mixed-argument"
+message = "Invalid argument type for argument #2 of `array_key_exists`: expected `array<array-key, mixed>`, but found `mixed`."
+count = 1
+
+[[issues]]
+file = "src/Connection/ConnectionRegister.php"
+code = "mixed-array-access"
+message = "Unsafe array access on type `mixed`."
+count = 2
+
+[[issues]]
+file = "src/Connection/ConnectionRegister.php"
+code = "mixed-array-assignment"
+message = "Unsafe array assignment on type `mixed`."
+count = 1
+
+[[issues]]
+file = "src/Connection/GuzzleConnection.php"
+code = "imprecise-type"
+message = "Type `array` in parameter `$config` is imprecise, equivalent to `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Connection/GuzzleConnection.php"
+code = "imprecise-type"
+message = "Type `array` in parameter `$filters` is imprecise, equivalent to `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Connection/GuzzleConnection.php"
+code = "imprecise-type"
+message = "Type `array` in parameter `$paginationSettings` is imprecise, equivalent to `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Connection/GuzzleConnection.php"
+code = "imprecise-type"
+message = "Type `array` in return type of `buildQuery` is imprecise, equivalent to `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Connection/GuzzleConnection.php"
+code = "less-specific-argument"
+message = 'Argument type mismatch for argument #2 of `Robwasripped\Restorm\Connection\GuzzleConnection::retrievepaginationdata`: expected `GuzzleHttp\Psr7\Response`, but provided type `Psr\Http\Message\ResponseInterface` is less specific.'
+count = 1
+
+[[issues]]
+file = "src/Connection/GuzzleConnection.php"
+code = "missing-return-type"
+message = "Function `retrievePaginationData` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Connection/GuzzleConnection.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `GuzzleHttp\Client::request`: expected `string`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Connection/GuzzleConnection.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `Robwasripped\Restorm\Connection\GuzzleConnection::buildquery`: expected `array<array-key, mixed>`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Connection/GuzzleConnection.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `Robwasripped\Restorm\Connection\GuzzleConnection::retrievepaginationdata`: expected `array<array-key, mixed>`, but found `nonnull`.'
+count = 1
+
+[[issues]]
+file = "src/Connection/GuzzleConnection.php"
+code = "mixed-argument"
+message = "Invalid argument type for argument #1 of `ltrim`: expected `string`, but found `mixed`."
+count = 1
+
+[[issues]]
+file = "src/Connection/GuzzleConnection.php"
+code = "mixed-argument"
+message = "Invalid argument type for argument #1 of `rtrim`: expected `string`, but found `mixed`."
+count = 1
+
+[[issues]]
+file = "src/Connection/GuzzleConnection.php"
+code = "mixed-array-access"
+message = "Unsafe array access on type `nonnull`."
+count = 2
+
+[[issues]]
+file = "src/Connection/GuzzleConnection.php"
+code = "mixed-array-index"
+message = "Invalid index type `mixed` used for array access on `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Connection/GuzzleConnection.php"
+code = "mixed-array-index"
+message = "Invalid index type `mixed` used for array access on `array<mixed, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Connection/GuzzleConnection.php"
+code = "mixed-assignment"
+message = "Assigning `nonnull` type to a variable may lead to unexpected behavior."
+count = 1
+
+[[issues]]
+file = "src/Connection/GuzzleConnection.php"
+code = "possibly-undefined-string-array-index"
+message = "Possibly undefined array key `string('base_uri')` accessed on `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Connection/GuzzleConnection.php"
+code = "possibly-undefined-string-array-index"
+message = "Possibly undefined array key `string('filter_mode')` accessed on `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Connection/GuzzleConnection.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `GuzzleHttp\Exception\ClientException` in `Robwasripped\Restorm\Connection\GuzzleConnection::handleQuery`.'
+count = 1
+
+[[issues]]
+file = "src/Connection/GuzzleConnection.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `GuzzleHttp\Exception\GuzzleException` in `Robwasripped\Restorm\Connection\GuzzleConnection::handleQuery`.'
+count = 1
+
+[[issues]]
+file = "src/Connection/GuzzleConnection.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `RuntimeException` in `Robwasripped\Restorm\Connection\GuzzleConnection::handleQuery`.'
+count = 1
+
+[[issues]]
+file = "src/Entity/EntityMetadata.php"
+code = "deprecated-method"
+message = "Call to deprecated method: `ReflectionProperty::setaccessible`."
+count = 2
+
+[[issues]]
+file = "src/Entity/EntityMetadata.php"
+code = "imprecise-type"
+message = "Type `array` in return type of `getProperties` is imprecise, equivalent to `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Entity/EntityMetadata.php"
+code = "imprecise-type"
+message = "Type `array` in return type of `getWritableProperties` is imprecise, equivalent to `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Entity/EntityMetadata.php"
+code = "imprecise-type"
+message = "Type `array` in return type of `getWritablePropertyValues` is imprecise, equivalent to `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Entity/EntityMetadata.php"
+code = "invalid-iterator"
+message = "The expression provided to `foreach` is not iterable. It resolved to type `mixed`, which is not iterable."
+count = 1
+
+[[issues]]
+file = "src/Entity/EntityMetadata.php"
+code = "missing-parameter-type"
+message = "Parameter `$propertyName` is missing a type hint."
+count = 2
+
+[[issues]]
+file = "src/Entity/EntityMetadata.php"
+code = "missing-parameter-type"
+message = "Parameter `$value` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Entity/EntityMetadata.php"
+code = "missing-return-type"
+message = "Function `getEntity` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Entity/EntityMetadata.php"
+code = "missing-return-type"
+message = "Function `getIdentifierValue` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Entity/EntityMetadata.php"
+code = "missing-return-type"
+message = "Function `getPropertyValue` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Entity/EntityMetadata.php"
+code = "missing-return-type"
+message = "Function `setPropertyValue` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Entity/EntityMetadata.php"
+code = "mixed-argument"
+message = "Invalid argument type for argument #1 of `ReflectionClass::getproperty`: expected `string`, but found `mixed`."
+count = 2
+
+[[issues]]
+file = "src/Entity/EntityMetadata.php"
+code = "mixed-argument"
+message = "Invalid argument type for argument #1 of `array_keys`: expected `array<('K.array_keys() extends array-key), ('V.array_keys() extends mixed)>`, but found `mixed`."
+count = 1
+
+[[issues]]
+file = "src/Entity/EntityMetadata.php"
+code = "mixed-argument"
+message = "Invalid argument type for argument #1 of `reflectionclass::__construct`: expected `('T.reflectionclass extends object)|class-string<'T.reflectionclass extends object>`, but found `mixed`."
+count = 1
+
+[[issues]]
+file = "src/Entity/EntityMetadata.php"
+code = "mixed-array-index"
+message = "Invalid index type `mixed` used for array access on `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Entity/EntityMetadata.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 5
+
+[[issues]]
+file = "src/Entity/EntityMetadata.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `ReflectionException` in `Robwasripped\Restorm\Entity\EntityMetadata::__construct`.'
+count = 1
+
+[[issues]]
+file = "src/Entity/EntityMetadata.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `ReflectionException` in `Robwasripped\Restorm\Entity\EntityMetadata::getPropertyValue`.'
+count = 1
+
+[[issues]]
+file = "src/Entity/EntityMetadata.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `ReflectionException` in `Robwasripped\Restorm\Entity\EntityMetadata::setPropertyValue`.'
+count = 1
+
+[[issues]]
+file = "src/Entity/EntityMetadataRegister.php"
+code = "mismatched-array-index"
+message = "Invalid array key type: `array-key|false` is not a valid key for this array."
+count = 1
+
+[[issues]]
+file = "src/Entity/EntityMetadataRegister.php"
+code = "missing-parameter-type"
+message = "Parameter `$entity` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Entity/EntityMetadataRegister.php"
+code = "missing-property-type"
+message = "Property `$entiyMetadata` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Entity/EntityMetadataRegister.php"
+code = "missing-return-type"
+message = "Function `removeEntityMetadata` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Entity/Proxy.php"
+code = "invalid-iterator"
+message = "The expression provided to `foreach` is not iterable. It resolved to type `mixed`, which is not iterable."
+count = 1
+
+[[issues]]
+file = "src/Entity/Proxy.php"
+code = "missing-return-type"
+message = "Function `buildProxy` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Entity/Proxy.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `ProxyManager\Factory\LazyLoadingGhostFactory::createproxy`: expected `class-string<ProxyManager\Proxy\GhostObjectInterface<object>>`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Entity/Proxy.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `Robwasripped\Restorm\EntityManager::getrepository`: expected `object|string`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Entity/Proxy.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `Robwasripped\Restorm\Entity\Proxy::getpropertyproxyname`: expected `string`, but found `mixed`.'
+count = 2
+
+[[issues]]
+file = "src/Entity/Proxy.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `Robwasripped\Restorm\Mapping\EntityMappingRegister::getentitymapping`: expected `string`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Entity/Proxy.php"
+code = "mixed-argument"
+message = "Invalid argument type for argument #1 of `property_exists`: expected `class-string|object`, but found `mixed`."
+count = 1
+
+[[issues]]
+file = "src/Entity/Proxy.php"
+code = "mixed-argument"
+message = "Invalid argument type for argument #1 of `reflectionclass::__construct`: expected `('T.reflectionclass extends object)|class-string<'T.reflectionclass extends object>`, but found `mixed`."
+count = 1
+
+[[issues]]
+file = "src/Entity/Proxy.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #2 of `Robwasripped\Restorm\Entity\Proxy::getpropertyproxyname`: expected `string`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Entity/Proxy.php"
+code = "mixed-argument"
+message = "Invalid argument type for argument #2 of `property_exists`: expected `string`, but found `mixed`."
+count = 1
+
+[[issues]]
+file = "src/Entity/Proxy.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 5
+
+[[issues]]
+file = "src/Entity/Proxy.php"
+code = "mixed-operand"
+message = "Right operand in `||` operation has `mixed` type."
+count = 1
+
+[[issues]]
+file = "src/Entity/Proxy.php"
+code = "possible-method-access-on-null"
+message = "Attempting to call a method on `null`."
+count = 1
+
+[[issues]]
+file = "src/Entity/Proxy.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `OutOfBoundsException` in `Robwasripped\Restorm\Entity\Proxy::buildProxy`.'
+count = 1
+
+[[issues]]
+file = "src/Entity/Proxy.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `ProxyManager\Signature\Exception\InvalidSignatureException` in `Robwasripped\Restorm\Entity\Proxy::buildProxy`.'
+count = 1
+
+[[issues]]
+file = "src/Entity/Proxy.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `ProxyManager\Signature\Exception\MissingSignatureException` in `Robwasripped\Restorm\Entity\Proxy::buildProxy`.'
+count = 1
+
+[[issues]]
+file = "src/Entity/Proxy.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `ReflectionException` in `Robwasripped\Restorm\Entity\Proxy::buildProxy`.'
+count = 1
+
+[[issues]]
+file = "src/Entity/Proxy.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `ReflectionException` in `Robwasripped\Restorm\Entity\Proxy::getPropertyProxyName`.'
+count = 1
+
+[[issues]]
+file = "src/Entity/Proxy.php"
+code = "unused-parameter"
+message = "Parameter `$method` is never used."
+count = 1
+
+[[issues]]
+file = "src/Entity/Proxy.php"
+code = "unused-parameter"
+message = "Parameter `$parameters` is never used."
+count = 1
+
+[[issues]]
+file = "src/Entity/Proxy.php"
+code = "unused-parameter"
+message = "Parameter `$properties` is never used."
+count = 1
+
+[[issues]]
+file = "src/EntityCollection.php"
+code = "imprecise-type"
+message = "Type `array` in parameter `$entities` is imprecise, equivalent to `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/EntityCollection.php"
+code = "imprecise-type"
+message = "Type `array` in return type of `toArray` is imprecise, equivalent to `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/EntityCollection.php"
+code = "missing-parameter-type"
+message = "Parameter `$entity` is missing a type hint."
+count = 3
+
+[[issues]]
+file = "src/EntityCollection.php"
+code = "missing-return-type"
+message = "Function `addEntity` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/EntityCollection.php"
+code = "missing-return-type"
+message = "Function `removeEntity` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/EntityCollection.php"
+code = "missing-template-parameter"
+message = "Too few template arguments for `ArrayAccess`: expected 2, but found 0."
+count = 1
+
+[[issues]]
+file = "src/EntityCollection.php"
+code = "missing-template-parameter"
+message = "Too few template arguments for `Iterator`: expected 2, but found 0."
+count = 1
+
+[[issues]]
+file = "src/EntityCollection.php"
+code = "mixed-argument"
+message = "Invalid argument type for argument #1 of `array_key_exists`: expected `bool|float|int|string`, but found `mixed`."
+count = 1
+
+[[issues]]
+file = "src/EntityCollection.php"
+code = "mixed-array-index"
+message = "Invalid index type `mixed` used for array access on `array<array-key, mixed>`."
+count = 2
+
+[[issues]]
+file = "src/EntityCollection.php"
+code = "mixed-array-index"
+message = "Invalid index type `nonnull` used for array access on `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/EntityManager.php"
+code = "imprecise-type"
+message = "Type `array` in parameter `$dataTransformers` is imprecise, equivalent to `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/EntityManager.php"
+code = "invalid-type-cast"
+message = "Casting `mixed` to `array`."
+count = 1
+
+[[issues]]
+file = "src/EntityManager.php"
+code = "less-specific-nested-argument-type"
+message = 'Argument type mismatch for argument #2 of `robwasripped\restorm\normalizer\normalizer::__construct`: expected `array<array-key, Robwasripped\Restorm\Normalizer\Transformer\TransformerInterface>`, but provided type `array<array-key, mixed>` is less specific.'
+count = 1
+
+[[issues]]
+file = "src/EntityManager.php"
+code = "missing-parameter-type"
+message = "Parameter `$entity` is missing a type hint."
+count = 2
+
+[[issues]]
+file = "src/EntityManager.php"
+code = "missing-return-type"
+message = "Function `persist` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/EntityManager.php"
+code = "missing-return-type"
+message = "Function `remove` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/EntityManager.php"
+code = "mixed-argument"
+message = "Invalid argument type for argument #1 of `get_class`: expected `object`, but found `mixed`."
+count = 1
+
+[[issues]]
+file = "src/EntityManager.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `robwasripped\restorm\entity\entitymetadata::__construct`: expected `object`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/EntityManager.php"
+code = "mixed-argument"
+message = "Invalid argument type for argument #2 of `array_intersect_key`: expected `array<array-key, mixed>`, but found `mixed`."
+count = 1
+
+[[issues]]
+file = "src/EntityManager.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #2 of `robwasripped\restorm\event\prepersistevent::__construct`: expected `string`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/EntityManager.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 2
+
+[[issues]]
+file = "src/EntityManager.php"
+code = "mixed-operand"
+message = "Right operand in `!=` comparison has `mixed` type."
+count = 1
+
+[[issues]]
+file = "src/EntityManager.php"
+code = "non-existent-method"
+message = 'Method `addsubscriber` does not exist on type `Symfony\Contracts\EventDispatcher\EventDispatcherInterface`.'
+count = 2
+
+[[issues]]
+file = "src/EntityManager.php"
+code = "possibly-null-argument"
+message = "Argument #1 of function `is_a` is possibly `null`, but parameter type `class-string|object` does not accept it."
+count = 1
+
+[[issues]]
+file = "src/EntityManager.php"
+code = "possibly-null-argument"
+message = 'Argument #1 of method `Robwasripped\Restorm\Normalizer\Normalizer::normalize` is possibly `null`, but parameter type `Robwasripped\Restorm\Entity\EntityMetadata` does not accept it.'
+count = 1
+
+[[issues]]
+file = "src/EntityManager.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Exception` in `Robwasripped\Restorm\EntityManager::getRepository`.'
+count = 1
+
+[[issues]]
+file = "src/EntityManager.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Robwasripped\Restorm\Exception\UnrecognisedEntityException` in `Robwasripped\Restorm\EntityManager::remove`.'
+count = 1
+
+[[issues]]
+file = "src/EntityManager.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Robwasripped\Restorm\Mapping\Exception\UnknownEntityException` in `Robwasripped\Restorm\EntityManager::persist`.'
+count = 1
+
+[[issues]]
+file = "src/EntityManager.php"
+code = "unsafe-instantiation"
+message = 'Potentially unsafe instantiation: `class-string<Robwasripped\Restorm\RepositoryInterface>` may contain the interface `Robwasripped\Restorm\RepositoryInterface` itself, which cannot be instantiated.'
+count = 1
+
+[[issues]]
+file = "src/EntityRepository.php"
+code = "imprecise-type"
+message = "Type `array` in parameter `$filters` is imprecise, equivalent to `array<array-key, mixed>`."
+count = 2
+
+[[issues]]
+file = "src/EntityRepository.php"
+code = "incompatible-parameter-name"
+message = 'Parameter #1 of `Robwasripped\Restorm\EntityRepository::findone()` is named `$filter` but parent `Robwasripped\Restorm\RepositoryInterface::findone()` names it `$id`'
+count = 1
+
+[[issues]]
+file = "src/EntityRepository.php"
+code = "incompatible-parameter-name"
+message = 'Parameter #2 of `Robwasripped\Restorm\EntityRepository::find()` is named `$page` but parent `Robwasripped\Restorm\RepositoryInterface::find()` names it `$offset`'
+count = 1
+
+[[issues]]
+file = "src/EntityRepository.php"
+code = "invalid-array-element-key"
+message = "Invalid array key type."
+count = 1
+
+[[issues]]
+file = "src/EntityRepository.php"
+code = "missing-return-type"
+message = "Function `remove` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/EntityRepository.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `Robwasripped\Restorm\Query\QueryBuilder::page`: expected `int`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/EntityRepository.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #2 of `Robwasripped\Restorm\Query\QueryBuilder::page`: expected `int`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "invalid-member-selector"
+message = "Invalid type `nonnull` used as a member selector; a string is expected."
+count = 3
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "invalid-type-cast"
+message = "Casting `mixed` to `array`."
+count = 1
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "missing-parameter-type"
+message = "Parameter `$entity` is missing a type hint."
+count = 2
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "missing-return-type"
+message = "Function `cacheEntityData` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "missing-return-type"
+message = "Function `cacheEntity` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "missing-return-type"
+message = "Function `findExistingEntity` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "missing-return-type"
+message = "Function `getEntityData` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "missing-return-type"
+message = "Function `getEntityIdentifier` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "missing-return-type"
+message = "Function `protectPendingEntityChanges` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "missing-return-type"
+message = "Function `storeNewEntity` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `Robwasripped\Restorm\EntityStore::getentityidentifiername`: expected `string`, but found `mixed`.'
+count = 2
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `Robwasripped\Restorm\Mapping\EntityMappingRegister::getentitymapping`: expected `string`, but found `mixed`.'
+count = 2
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "mixed-argument"
+message = "Invalid argument type for argument #1 of `get_class`: expected `object`, but found `mixed`."
+count = 1
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `robwasripped\restorm\entity\entitymetadata::__construct`: expected `object`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "mixed-array-access"
+message = "Unsafe array access on type `mixed`."
+count = 6
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "mixed-array-assignment"
+message = "Unsafe array assignment on type `mixed`."
+count = 2
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "mixed-array-index"
+message = "Invalid index type `mixed` used for array access on `array<array-key, mixed>`."
+count = 5
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 6
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "mixed-assignment"
+message = "Assigning `nonnull` type to a variable may lead to unexpected behavior."
+count = 1
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "mixed-property-access"
+message = "Attempting to access a property on a non-object type (`mixed`)."
+count = 3
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "mixed-return-statement"
+message = 'Could not infer a precise return type for function `robwasripped\restorm\entitystore::getentityidentifiername`. Saw type `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "possible-method-access-on-null"
+message = "Attempting to call a method on `null`."
+count = 1
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "string-member-selector"
+message = "This member selector uses a non-literal string type (`string`); its specific value cannot be statically determined."
+count = 2
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `LogicException` in `Robwasripped\Restorm\EntityStore::cacheEntity`.'
+count = 1
+
+[[issues]]
+file = "src/EntityStore.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Robwasripped\Restorm\Mapping\Exception\UnknownEntityException` in `Robwasripped\Restorm\EntityStore::getEntityData`.'
+count = 1
+
+[[issues]]
+file = "src/Event/PopulatedEntityEventInterface.php"
+code = "missing-return-type"
+message = "Function `getEntity` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Event/PostBuildEvent.php"
+code = "missing-parameter-type"
+message = "Parameter `$entity` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Event/PreBuildEvent.php"
+code = "missing-parameter-type"
+message = "Parameter `$data` is missing a type hint."
+count = 2
+
+[[issues]]
+file = "src/Event/PreBuildEvent.php"
+code = "missing-parameter-type"
+message = "Parameter `$entityClass` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Event/PreBuildEvent.php"
+code = "missing-parameter-type"
+message = "Parameter `$entity` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Event/PreBuildEvent.php"
+code = "missing-return-type"
+message = "Function `getData` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Event/PreBuildEvent.php"
+code = "missing-return-type"
+message = "Function `getEntityClass` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Event/PreBuildEvent.php"
+code = "missing-return-type"
+message = "Function `getEntity` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Event/PreBuildEvent.php"
+code = "missing-return-type"
+message = "Function `setData` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Event/PreBuildEvent.php"
+code = "missing-return-type"
+message = "Function `setEntity` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Event/PrePersistEvent.php"
+code = "missing-parameter-type"
+message = "Parameter `$entity` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Exception/UnrecognisedEntityException.php"
+code = "missing-parameter-type"
+message = "Parameter `$entity` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityBuilder.php"
+code = "missing-parameter-type"
+message = "Parameter `$entityData` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityBuilder.php"
+code = "missing-parameter-type"
+message = "Parameter `$entity` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityBuilder.php"
+code = "missing-return-type"
+message = "Function `buildEntity` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityBuilder.php"
+code = "missing-return-type"
+message = "Function `createEntity` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityBuilder.php"
+code = "missing-return-type"
+message = "Function `populateEntity` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityBuilder.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #2 of `Robwasripped\Restorm\Mapping\EntityBuilder::populateentity`: expected `stdClass`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityBuilder.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityBuilder.php"
+code = "possibly-null-argument"
+message = 'Argument #2 of method `Robwasripped\Restorm\Normalizer\Normalizer::denormalize` is possibly `null`, but parameter type `Robwasripped\Restorm\Entity\EntityMetadata` does not accept it.'
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityBuilder.php"
+code = "unknown-class-instantiation"
+message = "Cannot determine the concrete class for instantiation."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityMapping.php"
+code = "imprecise-type"
+message = "Type `array` in parameter `$paths` is imprecise, equivalent to `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityMapping.php"
+code = "imprecise-type"
+message = "Type `array` in parameter `$properties` is imprecise, equivalent to `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityMapping.php"
+code = "invalid-iterator"
+message = "The expression provided to `foreach` is not iterable. It resolved to type `mixed`, which is not iterable."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityMapping.php"
+code = "missing-parameter-type"
+message = "Parameter `$method` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityMapping.php"
+code = "missing-return-type"
+message = "Function `getConnection` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityMapping.php"
+code = "missing-return-type"
+message = "Function `getEntityClass` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityMapping.php"
+code = "missing-return-type"
+message = "Function `getIdentifierMappedFromName` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityMapping.php"
+code = "missing-return-type"
+message = "Function `getIdentifierName` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityMapping.php"
+code = "missing-return-type"
+message = "Function `getProperties` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityMapping.php"
+code = "missing-return-type"
+message = "Function `getWritableFields` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityMapping.php"
+code = "missing-return-type"
+message = "Function `getpath` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityMapping.php"
+code = "mixed-argument"
+message = "Invalid argument type for argument #2 of `array_key_exists`: expected `array<array-key, mixed>`, but found `mixed`."
+count = 4
+
+[[issues]]
+file = "src/Mapping/EntityMapping.php"
+code = "mixed-array-access"
+message = "Unsafe array access on type `mixed`."
+count = 2
+
+[[issues]]
+file = "src/Mapping/EntityMapping.php"
+code = "mixed-array-index"
+message = "Invalid index type `mixed` used for array access on `array<array-key, mixed>`."
+count = 2
+
+[[issues]]
+file = "src/Mapping/EntityMapping.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 5
+
+[[issues]]
+file = "src/Mapping/EntityMapping.php"
+code = "possibly-null-array-access"
+message = "Cannot perform array access on possibly `null` value."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityMapping.php"
+code = "property-type-coercion"
+message = "A value of a less specific type `array-key` is being assigned to property `$$identifier` (string)."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityMapping.php"
+code = "redundant-comparison"
+message = "Avoid direct comparison with boolean literals."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityMapping.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Exception` in `Robwasripped\Restorm\Mapping\EntityMapping::getIdentifierName`.'
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityMappingRegister.php"
+code = "missing-parameter-type"
+message = "Parameter `$entity` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityMappingRegister.php"
+code = "missing-return-type"
+message = "Function `addEntityMapping` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityMappingRegister.php"
+code = "mixed-argument"
+message = "Invalid argument type for argument #1 of `is_a`: expected `class-string|object`, but found `mixed`."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityMappingRegister.php"
+code = "mixed-argument"
+message = "Invalid argument type for argument #2 of `is_a`: expected `class-string`, but found `mixed`."
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityMappingRegister.php"
+code = "mixed-array-index"
+message = 'Invalid index type `mixed` used for array access on `array<array-key, Robwasripped\Restorm\Mapping\EntityMapping>`.'
+count = 1
+
+[[issues]]
+file = "src/Mapping/EntityMappingRegister.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Robwasripped\Restorm\Mapping\Exception\UnknownEntityException` in `Robwasripped\Restorm\Mapping\EntityMappingRegister::getEntityMapping`.'
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "invalid-iterator"
+message = "The expression provided to `foreach` is not iterable. It resolved to type `mixed`, which is not iterable."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "invalid-iterator"
+message = "The expression provided to `foreach` is not iterable. It resolved to type `nonnull`, which is not iterable."
+count = 2
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "invalid-member-selector"
+message = "Invalid type `mixed` used as a member selector; a string is expected."
+count = 3
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "invalid-member-selector"
+message = "Invalid type `nonnull` used as a member selector; a string is expected."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "invalid-member-selector"
+message = "Invalid type `truthy-mixed` used as a member selector; a string is expected."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "missing-parameter-type"
+message = "Parameter `$type` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "missing-parameter-type"
+message = "Parameter `$value` is missing a type hint."
+count = 3
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "missing-return-type"
+message = "Function `denormalizeObject` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "missing-return-type"
+message = "Function `denormalize` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "missing-return-type"
+message = "Function `normalizeObject` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "mixed-argument"
+message = "Invalid argument type for argument #1 of `array_key_exists`: expected `bool|float|int|string`, but found `mixed`."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #2 of `Robwasripped\Restorm\Normalizer\Transformer\TransformerInterface::denormalize`: expected `array<array-key, mixed>`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #2 of `Robwasripped\Restorm\Normalizer\Transformer\TransformerInterface::normalize`: expected `array<array-key, mixed>`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "mixed-argument"
+message = "Invalid argument type for argument #2 of `property_exists`: expected `string`, but found `mixed`."
+count = 2
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #2 of `robwasripped\restorm\normalizer\transformer\transformerinterface::denormalize`: expected `array<array-key, mixed>`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "mixed-argument"
+message = "Invalid argument type for argument #2 of `sprintf`: expected `Stringable|null|scalar`, but found `mixed`."
+count = 2
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "mixed-array-access"
+message = "Unsafe array access on type `mixed`."
+count = 2
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "mixed-array-index"
+message = 'Invalid index type `mixed` used for array access on `array<array-key, Robwasripped\Restorm\Normalizer\Transformer\TransformerInterface>`.'
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "mixed-array-index"
+message = "Invalid index type `mixed` used for array access on `array<array-key, mixed>`."
+count = 2
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 19
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "mixed-assignment"
+message = "Assigning `nonnull` type to a variable may lead to unexpected behavior."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "mixed-operand"
+message = "Left operand in `&&` operation has `mixed` type."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "mixed-operand"
+message = "Right operand in `&&` operation has `mixed` type."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Robwasripped\Restorm\Normalizer\Exception\MissingPropertyException` in `Robwasripped\Restorm\Normalizer\Normalizer::denormalize`.'
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Robwasripped\Restorm\Normalizer\Exception\UnknownPropertyTypeException` in `Robwasripped\Restorm\Normalizer\Normalizer::inferType`.'
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Normalizer.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Robwasripped\Restorm\Normalizer\Exception\UnknownTransformerException` in `Robwasripped\Restorm\Normalizer\Normalizer::getTransformer`.'
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Transformer/AdvancedTransformerInterface.php"
+code = "missing-parameter-type"
+message = "Parameter `$identifierValue` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Transformer/DateTimeTransformer.php"
+code = "imprecise-type"
+message = "Type `array` in parameter `$options` is imprecise, equivalent to `array<array-key, mixed>`."
+count = 2
+
+[[issues]]
+file = "src/Normalizer/Transformer/DateTimeTransformer.php"
+code = "mixed-argument"
+message = "Invalid argument type for argument #1 of `datetime::__construct`: expected `string`, but found `nonnull`."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Transformer/DateTimeTransformer.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `InvalidArgumentException` in `Robwasripped\Restorm\Normalizer\Transformer\DateTimeTransformer::normalize`.'
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Transformer/EntityTransformer.php"
+code = "imprecise-type"
+message = "Type `array` in parameter `$options` is imprecise, equivalent to `array<array-key, mixed>`."
+count = 2
+
+[[issues]]
+file = "src/Normalizer/Transformer/EntityTransformer.php"
+code = "invalid-array-element-key"
+message = "Invalid array key type."
+count = 2
+
+[[issues]]
+file = "src/Normalizer/Transformer/EntityTransformer.php"
+code = "missing-parameter-type"
+message = "Parameter `$entityData` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Transformer/EntityTransformer.php"
+code = "missing-parameter-type"
+message = "Parameter `$entity` is missing a type hint."
+count = 2
+
+[[issues]]
+file = "src/Normalizer/Transformer/EntityTransformer.php"
+code = "missing-return-type"
+message = "Function `buildEntity` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Transformer/EntityTransformer.php"
+code = "missing-return-type"
+message = "Function `getEntityIdentifierValue` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Transformer/EntityTransformer.php"
+code = "missing-return-type"
+message = "Function `getNormalizedEntity` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Transformer/EntityTransformer.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `Robwasripped\Restorm\Mapping\EntityBuilder::buildentity`: expected `string`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Transformer/EntityTransformer.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `Robwasripped\Restorm\Mapping\EntityMappingRegister::getentitymapping`: expected `string`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Transformer/EntityTransformer.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `Robwasripped\Restorm\Query\QueryBuilder::get`: expected `string`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Transformer/EntityTransformer.php"
+code = "mixed-argument"
+message = "Invalid argument type for argument #1 of `get_class`: expected `object`, but found `mixed`."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Transformer/EntityTransformer.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `robwasripped\restorm\entity\entitymetadata::__construct`: expected `object`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Transformer/EntityTransformer.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #3 of `Robwasripped\Restorm\Normalizer\Transformer\EntityTransformer::buildentity`: expected `bool`, but found `nonnull`.'
+count = 2
+
+[[issues]]
+file = "src/Normalizer/Transformer/EntityTransformer.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 6
+
+[[issues]]
+file = "src/Normalizer/Transformer/EntityTransformer.php"
+code = "possibly-undefined-string-array-index"
+message = "Possibly undefined array key `string('entity')` accessed on `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Transformer/EntityTransformer.php"
+code = "possibly-undefined-string-array-index"
+message = "Possibly undefined array key `string('inverse_field')` accessed on `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Transformer/EntityTransformer.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Robwasripped\Restorm\Normalizer\Exception\InvalidValueException` in `Robwasripped\Restorm\Normalizer\Transformer\EntityTransformer::denormalize`.'
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Transformer/EntityTransformer.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Robwasripped\Restorm\Normalizer\Exception\InvalidValueException` in `Robwasripped\Restorm\Normalizer\Transformer\EntityTransformer::normalize`.'
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Transformer/ScalarTransformer.php"
+code = "imprecise-type"
+message = "Type `array` in parameter `$options` is imprecise, equivalent to `array<array-key, mixed>`."
+count = 3
+
+[[issues]]
+file = "src/Normalizer/Transformer/ScalarTransformer.php"
+code = "missing-parameter-type"
+message = "Parameter `$value` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Transformer/ScalarTransformer.php"
+code = "missing-return-type"
+message = "Function `bidirectionalNormalize` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Transformer/ScalarTransformer.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 2
+
+[[issues]]
+file = "src/Normalizer/Transformer/ScalarTransformer.php"
+code = "possibly-invalid-argument"
+message = "Possible argument type mismatch for argument #2 of `settype`: expected `string('array')|string('bool')|string('boolean')|string('double')|string('float')|string('int')|string('integer')|string('null')|string('object')|string('string')`, but possibly received `truthy-string`."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Transformer/ScalarTransformer.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Robwasripped\Restorm\Normalizer\Exception\InvalidValueException` in `Robwasripped\Restorm\Normalizer\Transformer\ScalarTransformer::bidirectionalNormalize`.'
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Transformer/TransformerInterface.php"
+code = "imprecise-type"
+message = "Type `array` in parameter `$options` is imprecise, equivalent to `array<array-key, mixed>`."
+count = 2
+
+[[issues]]
+file = "src/Normalizer/Transformer/TransformerInterface.php"
+code = "missing-parameter-type"
+message = "Parameter `$value` is missing a type hint."
+count = 2
+
+[[issues]]
+file = "src/Normalizer/Transformer/TransformerInterface.php"
+code = "missing-return-type"
+message = "Function `denormalize` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Normalizer/Transformer/TransformerInterface.php"
+code = "missing-return-type"
+message = "Function `normalize` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/PaginatedCollection.php"
+code = "impossible-type-comparison"
+message = "Impossible type assertion: `$this->count` of type `int` can never be `null`."
+count = 1
+
+[[issues]]
+file = "src/PaginatedCollection.php"
+code = "invalid-iterator"
+message = "The expression provided to `foreach` is not iterable. It resolved to type `truthy-mixed`, which is not iterable."
+count = 1
+
+[[issues]]
+file = "src/PaginatedCollection.php"
+code = "invalid-operand"
+message = "Cannot increment value of type `mixed`."
+count = 1
+
+[[issues]]
+file = "src/PaginatedCollection.php"
+code = "missing-return-type"
+message = "Function `populateEntitiesFromQuery` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/PaginatedCollection.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 2
+
+[[issues]]
+file = "src/PaginatedCollection.php"
+code = "mixed-operand"
+message = "Left operand in binary operation has type `mixed`."
+count = 1
+
+[[issues]]
+file = "src/PaginatedCollection.php"
+code = "redundant-comparison"
+message = "Redundant `!==` comparison: left-hand side is always not identical to right-hand side."
+count = 2
+
+[[issues]]
+file = "src/PaginatedCollection.php"
+code = "redundant-condition"
+message = "This condition (type `true`) will always evaluate to true."
+count = 1
+
+[[issues]]
+file = "src/PaginatedCollection.php"
+code = "redundant-logical-operation"
+message = "Redundant `&&` operation: left operand is always truthy and right operand is evaluated."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "imprecise-type"
+message = "Type `array` in parameter `$filter` is imprecise, equivalent to `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "imprecise-type"
+message = "Type `array` in parameter `$sort` is imprecise, equivalent to `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-parameter-type"
+message = "Parameter `$data` is missing a type hint."
+count = 2
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-parameter-type"
+message = "Parameter `$entityData` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-parameter-type"
+message = "Parameter `$filter` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-parameter-type"
+message = "Parameter `$key` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-parameter-type"
+message = "Parameter `$method` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-parameter-type"
+message = "Parameter `$page` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-parameter-type"
+message = "Parameter `$path` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-parameter-type"
+message = "Parameter `$perPage` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-parameter-type"
+message = "Parameter `$sort` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-parameter-type"
+message = "Parameter `$value` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-property-type"
+message = "Property `$headers` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-return-type"
+message = "Function `buildEntity` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-return-type"
+message = "Function `getData` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-return-type"
+message = "Function `getEntityClass` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-return-type"
+message = "Function `getFilter` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-return-type"
+message = "Function `getHeaders` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-return-type"
+message = "Function `getMethod` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-return-type"
+message = "Function `getPage` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-return-type"
+message = "Function `getPath` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-return-type"
+message = "Function `getPerPage` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-return-type"
+message = "Function `getResult` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-return-type"
+message = "Function `getSingleResult` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-return-type"
+message = "Function `getSort` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-return-type"
+message = "Function `setData` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-return-type"
+message = "Function `setFilter` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-return-type"
+message = "Function `setHeader` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-return-type"
+message = "Function `setMethod` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-return-type"
+message = "Function `setPage` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-return-type"
+message = "Function `setPath` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-return-type"
+message = "Function `setPerPage` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "missing-return-type"
+message = "Function `setSort` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #4 of `robwasripped\restorm\entitycollection::__construct`: expected `int|null`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #5 of `robwasripped\restorm\paginatedcollection::__construct`: expected `int|null`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "mixed-array-index"
+message = "Invalid index type `mixed` used for array access on `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 4
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "mixed-property-type-coercion"
+message = "A value with a less specific type `mixed` is being assigned to property `$$filter` (array<array-key, mixed>)."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "mixed-property-type-coercion"
+message = "A value with a less specific type `mixed` is being assigned to property `$$method` (string)."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "mixed-property-type-coercion"
+message = "A value with a less specific type `mixed` is being assigned to property `$$page` (int)."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "mixed-property-type-coercion"
+message = "A value with a less specific type `mixed` is being assigned to property `$$path` (string)."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "mixed-property-type-coercion"
+message = "A value with a less specific type `mixed` is being assigned to property `$$perPage` (int)."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "mixed-property-type-coercion"
+message = "A value with a less specific type `mixed` is being assigned to property `$$sort` (array<array-key, mixed>)."
+count = 1
+
+[[issues]]
+file = "src/Query/Query.php"
+code = "non-existent-method"
+message = 'Method `getcurrentpage` does not exist on type `Robwasripped\Restorm\Connection\ConnectionInterface`.'
+count = 1
+
+[[issues]]
+file = "src/Query/QueryBuilder.php"
+code = "imprecise-type"
+message = "Type `array` in parameter `$filter` is imprecise, equivalent to `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Query/QueryBuilder.php"
+code = "imprecise-type"
+message = "Type `array` in parameter `$sort` is imprecise, equivalent to `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/Query/QueryBuilder.php"
+code = "less-specific-nested-argument-type"
+message = "Argument type mismatch for argument #2 of `preg_replace_callback`: expected `(callable(array<array-key, string>): string)`, but provided type `(closure(mixed): mixed)` is less specific."
+count = 1
+
+[[issues]]
+file = "src/Query/QueryBuilder.php"
+code = "missing-parameter-type"
+message = "Parameter `$data` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/QueryBuilder.php"
+code = "missing-parameter-type"
+message = "Parameter `$entity` is missing a type hint."
+count = 5
+
+[[issues]]
+file = "src/Query/QueryBuilder.php"
+code = "missing-property-type"
+message = "Property `$filter` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/QueryBuilder.php"
+code = "missing-property-type"
+message = "Property `$page` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/QueryBuilder.php"
+code = "missing-property-type"
+message = "Property `$perPage` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/QueryBuilder.php"
+code = "missing-property-type"
+message = "Property `$sort` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/QueryBuilder.php"
+code = "missing-return-type"
+message = "Function `getEndpoint` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/Query/QueryBuilder.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `Robwasripped\Restorm\Connection\ConnectionRegister::getconnections`: expected `string`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Query/QueryBuilder.php"
+code = "mixed-argument"
+message = "Invalid argument type for argument #1 of `array_key_exists`: expected `bool|float|int|string`, but found `mixed`."
+count = 1
+
+[[issues]]
+file = "src/Query/QueryBuilder.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `robwasripped\restorm\mapping\exception\unknownentityexception::__construct`: expected `string`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Query/QueryBuilder.php"
+code = "mixed-argument"
+message = "Invalid argument type for argument #3 of `preg_replace_callback`: expected `array<array-key, string>|string`, but found `mixed`."
+count = 1
+
+[[issues]]
+file = "src/Query/QueryBuilder.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #4 of `robwasripped\restorm\query\query::__construct`: expected `string`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Query/QueryBuilder.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 3
+
+[[issues]]
+file = "src/Query/QueryBuilder.php"
+code = "mixed-property-type-coercion"
+message = "A value with a less specific type `mixed` is being assigned to property `$$entityClass` (string)."
+count = 1
+
+[[issues]]
+file = "src/Query/QueryBuilder.php"
+code = "possibly-undefined-int-array-index"
+message = "Possibly undefined array key `int(1)` accessed on `array<array-key, string>`."
+count = 2
+
+[[issues]]
+file = "src/Query/QueryBuilder.php"
+code = "unhandled-thrown-type"
+message = 'Potentially unhandled exception `Robwasripped\Restorm\Mapping\Exception\UnknownEntityException` in `Robwasripped\Restorm\Query\QueryBuilder::action`.'
+count = 1
+
+[[issues]]
+file = "src/RepositoryInterface.php"
+code = "imprecise-type"
+message = "Type `array` in parameter `$filters` is imprecise, equivalent to `array<array-key, mixed>`."
+count = 1
+
+[[issues]]
+file = "src/RepositoryInterface.php"
+code = "missing-parameter-type"
+message = "Parameter `$id` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/RepositoryInterface.php"
+code = "missing-parameter-type"
+message = "Parameter `$limit` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/RepositoryInterface.php"
+code = "missing-parameter-type"
+message = "Parameter `$offset` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/RepositoryInterface.php"
+code = "missing-return-type"
+message = "Function `findAll` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/RepositoryInterface.php"
+code = "missing-return-type"
+message = "Function `findOne` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/RepositoryInterface.php"
+code = "missing-return-type"
+message = "Function `find` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/RepositoryRegister.php"
+code = "missing-property-type"
+message = "Property `$repositories` is missing a type hint."
+count = 1
+
+[[issues]]
+file = "src/RepositoryRegister.php"
+code = "missing-return-type"
+message = "Function `addRepository` is missing a return type hint."
+count = 1
+
+[[issues]]
+file = "src/RepositoryRegister.php"
+code = "mixed-argument"
+message = "Invalid argument type for argument #2 of `array_key_exists`: expected `array<array-key, mixed>`, but found `mixed`."
+count = 1
+
+[[issues]]
+file = "src/RepositoryRegister.php"
+code = "mixed-array-access"
+message = "Unsafe array access on type `mixed`."
+count = 1
+
+[[issues]]
+file = "src/RepositoryRegister.php"
+code = "mixed-array-assignment"
+message = "Unsafe array assignment on type `mixed`."
+count = 1
+
+[[issues]]
+file = "src/RepositoryRegister.php"
+code = "mixed-return-statement"
+message = 'Could not infer a precise return type for function `robwasripped\restorm\repositoryregister::getrepository`. Saw type `mixed`.'
+count = 1

@@ -36,15 +36,6 @@ use Robwasripped\Restorm\Query\Query;
  */
 class PaginatedCollection extends EntityCollection
 {
-    /**
-     * @var Query
-     */
-    private readonly Query $originalQuery;
-
-    /**
-     * @var bool Whether the original query has been used or not yet.
-     */
-    private $isInitialized;
     private $previousPage;
 
     /**
@@ -52,11 +43,12 @@ class PaginatedCollection extends EntityCollection
      */
     private $count;
 
-    public function __construct(Query $query, bool $isInitialized, ?int $totalItemSum = null, ?int $pageItemSum = null, ?int $currentPage = null)
+    public function __construct(private readonly Query $originalQuery, /**
+     * @var bool Whether the original query has been used or not yet.
+     */
+    private bool $isInitialized, ?int $totalItemSum = null, ?int $pageItemSum = null, ?int $currentPage = null)
     {
-        $this->originalQuery = $query;
-        $this->isInitialized = $isInitialized;
-        $this->previousPage = $query->getPage() ?: 1;
+        $this->previousPage = \max(1, $this->originalQuery->getPage());
 
         parent::__construct([], $totalItemSum, $pageItemSum, $currentPage);
     }

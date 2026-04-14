@@ -27,7 +27,7 @@ declare(strict_types=1);
 
 namespace Robwasripped\Restorm\Connection;
 
-use Symfony\Component\EventDispatcher\EventDispatcherInterface;
+use Symfony\Contracts\EventDispatcher\EventDispatcherInterface;
 use Robwasripped\Restorm\Event\PreQueryEvent;
 use Robwasripped\Restorm\Query\Query;
 use GuzzleHttp\Client;
@@ -42,10 +42,6 @@ use GuzzleHttp\Psr7\Response;
 class GuzzleConnection implements ConnectionInterface, PaginatedConnectionInterface
 {
     private readonly Client $guzzleClient;
-
-    private readonly array $config;
-
-    private readonly EventDispatcherInterface $eventDispatcher;
 
     /**
      *
@@ -65,12 +61,10 @@ class GuzzleConnection implements ConnectionInterface, PaginatedConnectionInterf
      */
     private $currentPage;
 
-    public function __construct(array $config, EventDispatcherInterface $eventDispatcher)
+    public function __construct(private readonly array $config, private readonly EventDispatcherInterface $eventDispatcher)
     {
-        $this->config = $config;
-        $this->eventDispatcher = $eventDispatcher;
         $this->guzzleClient = new Client([
-            'base_uri' => rtrim($config['base_uri'], '/') . '/'
+            'base_uri' => rtrim($this->config['base_uri'], '/') . '/'
         ]);
     }
 
@@ -78,7 +72,7 @@ class GuzzleConnection implements ConnectionInterface, PaginatedConnectionInterf
     {
         $path = ltrim($query->getPath(), '/');
 
-        $this->eventDispatcher->dispatch(PreQueryEvent::NAME, new PreQueryEvent($query));
+        $this->eventDispatcher->dispatch(new PreQueryEvent($query));
 
         $options = [];
 

@@ -40,17 +40,16 @@ use Robwasripped\Restorm\Event\PreBuildEvent;
  */
 class Proxy implements EventSubscriberInterface
 {
-    private readonly EntityManager $entityManager;
-
-    public function __construct(EntityManager $entityManager)
+    public function __construct(
+        private readonly EntityManager $entityManager
+        )
     {
-        $this->entityManager = $entityManager;
     }
 
     public static function getSubscribedEvents(): array
     {
         return [
-            PreBuildEvent::NAME => [
+            PreBuildEvent::class => [
                 ['buildProxy', -20],
             ],
         ];
@@ -70,15 +69,16 @@ class Proxy implements EventSubscriberInterface
         $mappedProperties = $entityMapping->getProperties();
 
         $reflectionProperties = (new \ReflectionClass($event->getEntityClass()))->getProperties(\ReflectionProperty::IS_PRIVATE);
-        $properties = array_map(static function(\ReflectionProperty $reflectionProperty) {
-            return $reflectionProperty->getName();
-        }, $reflectionProperties);
+        $properties = array_map(
+            static fn(\ReflectionProperty $reflectionProperty) => $reflectionProperty->getName(),
+            $reflectionProperties
+        );
 
         foreach ($mappedProperties as $propertyName => $propertyOptions) {
             $dataPropertyName = $propertyOptions['map_from'] ?? $propertyName;
             if (!property_exists($event->getData(), $dataPropertyName)) {
 
-                $propertyKey = array_search($propertyName, $properties);
+                $propertyKey = array_search($propertyName, $properties, true);
 
                 // Remove properties from the skipped properties list if they're
                 // not already set or if they're an inverse_field

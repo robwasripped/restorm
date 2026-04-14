@@ -36,18 +36,11 @@ use Robwasripped\Restorm\Mapping\EntityMapping;
  */
 class EntityMetadata
 {
-    private readonly object $entity;
-
-    private readonly EntityMapping $entityMapping;
-
     private readonly \ReflectionClass $entityReflection;
 
-    public function __construct($entity, EntityMapping $entityMapping)
+    public function __construct(private readonly object $entity, private readonly EntityMapping $entityMapping)
     {
-        $this->entity = $entity;
-        $this->entityMapping = $entityMapping;
-
-        $this->entityReflection = new \ReflectionClass($entityMapping->getEntityClass());
+        $this->entityReflection = new \ReflectionClass($this->entityMapping->getEntityClass());
     }
 
     public function getIdentifierValue()
