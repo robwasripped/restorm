@@ -20,5 +20,13 @@
         "psr-4": {
             "Robwasripped\\Restorm\\": "src"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Robwasripped\\Restorm\\Tests\\": "tests"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^13.1"
     }
 }
