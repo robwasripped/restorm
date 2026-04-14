@@ -34,7 +34,7 @@ use Robwasripped\Restorm\Normalizer\Normalizer;
 use Robwasripped\Restorm\Entity\Proxy;
 use Robwasripped\Restorm\Entity\EntityMetadataRegister;
 use Robwasripped\Restorm\Mapping\EntityBuilder;
-use Symfony\Component\EventDispatcher\EventDispatcherInterface;
+use Symfony\Contracts\EventDispatcher\EventDispatcherInterface;
 
 use ProxyManager\Factory\LazyLoadingGhostFactory;
 use Robwasripped\Restorm\Event\PrePersistEvent;

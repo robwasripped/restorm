@@ -27,7 +27,7 @@ declare(strict_types=1);
 
 namespace Robwasripped\Restorm\Event;
 
-use Symfony\Component\EventDispatcher\Event;
+use Symfony\Contracts\EventDispatcher\Event;
 
 /**
  * Description of OnResponseEvent
@@ -36,8 +36,6 @@ use Symfony\Component\EventDispatcher\Event;
  */
 class PreBuildEvent extends Event
 {
-    const NAME = 'restorm.pre_build';
-
     private $entityClass;
     private $data;
     private $partialData;

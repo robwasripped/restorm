@@ -78,7 +78,7 @@ class EntityMapping
 
             foreach ($this->properties as $propertyName => $property) {
 
-                if (!isset($property['identifier']) || !$property['identifier'] === true) {
+                if (!array_key_exists('identifier', $property) || !$property['identifier'] === true) {
                     continue;
                 }
 
@@ -125,7 +125,7 @@ class EntityMapping
         $writableFields = [];
 
         foreach ($this->getProperties() as $propertyName => $propertyOptions) {
-            if (isset($propertyOptions['read_only']) && $propertyOptions['read_only'] === true) {
+            if (array_key_exists('read_only', $propertyOptions) && $propertyOptions['read_only'] === true) {
                 continue;
             }
 

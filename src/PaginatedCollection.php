@@ -56,7 +56,7 @@ class PaginatedCollection extends EntityCollection
     {
         $this->originalQuery = $query;
         $this->isInitialized = $isInitialized;
-        $this->previousPage = $query->getPage() ?: 1;
+        $this->previousPage = \max(1, $query->getPage());
 
         parent::__construct([], $totalItemSum, $pageItemSum, $currentPage);
     }

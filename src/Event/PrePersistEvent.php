@@ -27,7 +27,7 @@ declare(strict_types=1);
 
 namespace Robwasripped\Restorm\Event;
 
-use Symfony\Component\EventDispatcher\Event;
+use Symfony\Contracts\EventDispatcher\Event;
 
 /**
  * Description of PrePersistEvent
@@ -36,8 +36,6 @@ use Symfony\Component\EventDispatcher\Event;
  */
 class PrePersistEvent extends Event implements PopulatedEntityEventInterface
 {
-    const NAME = 'restorm.pre_persist';
-
     private $entity;
 
     /**

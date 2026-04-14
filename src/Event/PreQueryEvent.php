@@ -27,13 +27,11 @@ declare(strict_types=1);
 
 namespace Robwasripped\Restorm\Event;
 
-use Symfony\Component\EventDispatcher\Event;
+use Symfony\Contracts\EventDispatcher\Event;
 use Robwasripped\Restorm\Query\Query;
 
 class PreQueryEvent extends Event
 {
-    const NAME = 'restorm.pre_query';
-
     /**
      * @var Query
      */

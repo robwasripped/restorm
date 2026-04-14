@@ -34,7 +34,7 @@ use Robwasripped\Restorm\Connection\ConnectionRegister;
 use Robwasripped\Restorm\Normalizer\Transformer\TransformerInterface;
 use Robwasripped\Restorm\Connection\GuzzleConnection;
 use Symfony\Component\EventDispatcher\EventDispatcher;
-use Symfony\Component\EventDispatcher\EventDispatcherInterface;
+use Symfony\Contracts\EventDispatcher\EventDispatcherInterface;
 
 /**
  * Description of Configuration
@@ -67,11 +67,11 @@ class Configuration
      */
     private $eventDispatcher;
 
-    private function __construct(array $configuration, EventDispatcherInterface $eventDispatcher = null)
+    private function __construct(array $configuration, ?EventDispatcherInterface $eventDispatcher = null)
     {
         $this->configuration = $configuration;
 
-        $this->eventDispatcher = $eventDispatcher ?: new EventDispatcher;
+        $this->eventDispatcher = $eventDispatcher ?? new EventDispatcher;
         $this->entityMappingRegister = $this->buildEntityMappingRegister();
         $this->connectionRegister = $this->buildConnectionRegister();
         $this->dataTransformers = $this->buildDataTransformers();
@@ -169,7 +169,7 @@ class Configuration
         $transformers = [];
 
         foreach ($this->configuration['transformers'] as $transformerType => $transformerClass) {
-            $transformers[$transformerType] = (new $transformerClass);
+            $transformers[$transformerType] = new $transformerClass;
         }
 
         return $transformers;

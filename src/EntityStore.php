@@ -69,15 +69,15 @@ class EntityStore implements EventSubscriberInterface
     public static function getSubscribedEvents(): array
     {
         return [
-            PreBuildEvent::NAME => [
+            PreBuildEvent::class => [
                 ['cacheEntityData', -10],
                 ['findExistingEntity', -10],
                 ['protectPendingEntityChanges', -20],
             ],
-            PostBuildEvent::NAME => [
+            PostBuildEvent::class => [
                 ['cacheEntity', 0],
             ],
-            PrePersistEvent::NAME => [
+            PrePersistEvent::class => [
                 ['storeNewEntity', 0],
             ]
         ];
