@@ -1,0 +1,9 @@
+{
+    "name": "restorm",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "remoteUser": "vscode",
+    "postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder} && composer install --prefer-dist --no-progress --no-interaction"
+}

@@ -54,6 +54,28 @@ require __DIR__ . '/../vendor/autoload.php';
 ```
 
 
+## Development Container
+
+This repository includes a VS Code/Codespaces dev container for running the
+project toolchain in a consistent PHP environment. Mago is installed in the
+container image, not in the repository workspace.
+
+The container uses PHP 8.4 because the current locked development toolchain,
+including PHPUnit 13, requires it. Mago still reads `mago.toml`, so analysis
+continues to target the project's PHP 8.1 code level.
+
+After opening the repository in the container, the initial setup runs `composer
+install` so PHPUnit is ready to use. If `composer.json` or `composer.lock`
+changes later, rerun `composer install` inside the container before running the
+tools below.
+
+```sh
+vendor/bin/phpunit
+mago lint
+mago analyze
+```
+
+
 # Quick Start
 
 The example below can be used for reference for setting up a new project with
